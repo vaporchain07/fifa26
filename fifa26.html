@@ -588,7 +588,17 @@
 </div>
 
 <script>
-  const playerData = {
+  const LIVE_DATA_CONFIG = {
+    enabled: true,
+    provider: "football-data.org",
+    baseUrl: "https://api.football-data.org/v4",
+    competition: "WC",
+    season: 2026,
+    staticDataUrl: "data/world-cup.json",
+    token: window.FOOTBALL_DATA_TOKEN || localStorage.getItem("footballDataToken") || ""
+  };
+
+  let playerData = {
     goals: [
       { rank: 1, name: "Kylian Mbappé", country: "🇫🇷 France", avatar: "⚡", stat1: "4 goals", stat2: "1 assist", stat3: "8.9 avg" },
       { rank: 2, name: "Erling Haaland", country: "🇳🇴 Norway", avatar: "🦁", stat1: "3 goals", stat2: "0 assists", stat3: "8.5 avg" },
@@ -607,8 +617,223 @@
   };
 
   const rankClass = ["r1","r2","r3"];
+  let activePlayerCategory = "goals";
+
+  const countryFlags = {
+    Argentina: "🇦🇷", Brazil: "🇧🇷", Canada: "🇨🇦", England: "🏴",
+    France: "🇫🇷", Mexico: "🇲🇽", Norway: "🇳🇴", Spain: "🇪🇸",
+    "United States": "🇺🇸", USA: "🇺🇸", Germany: "🇩🇪", Italy: "🇮🇹",
+    Portugal: "🇵🇹", Netherlands: "🇳🇱", Belgium: "🇧🇪", Uruguay: "🇺🇾",
+    Colombia: "🇨🇴", Japan: "🇯🇵", Morocco: "🇲🇦", Croatia: "🇭🇷"
+  };
+
+  function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[char]));
+  }
+
+  function flagFor(value) {
+    const clean = String(value || "").replace(/ FC| CF| AFC| SC/g, "").trim();
+    if (countryFlags[clean]) return countryFlags[clean];
+    const code = clean.length === 3 ? clean.toUpperCase() : "";
+    if (!/^[A-Z]{3}$/.test(code)) return "🏳";
+    const iso2 = { ARG:"AR", BRA:"BR", CAN:"CA", FRA:"FR", MEX:"MX", ESP:"ES", USA:"US", GER:"DE", ITA:"IT", POR:"PT", NED:"NL", BEL:"BE", URU:"UY", COL:"CO", JPN:"JP", MAR:"MA", CRO:"HR" }[code];
+    if (!iso2) return "🏳";
+    return [...iso2].map(char => String.fromCodePoint(127397 + char.charCodeAt())).join("");
+  }
+
+  function stageLabel(match) {
+    return (match.group || match.stage || "World Cup").replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  function matchDate(match) {
+    return new Date(match.utcDate);
+  }
+
+  function isLive(match) {
+    return ["IN_PLAY", "LIVE", "PAUSED"].includes(match.status);
+  }
+
+  function statusText(match) {
+    if (isLive(match)) return "● Live";
+    if (match.status === "FINISHED") return "FT";
+    if (match.status === "POSTPONED") return "Postponed";
+    return matchDate(match).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  }
+
+  function scoreText(match) {
+    const fullTime = match.score?.fullTime || {};
+    const regularTime = match.score?.regularTime || {};
+    const home = fullTime.home ?? regularTime.home;
+    const away = fullTime.away ?? regularTime.away;
+    return home == null || away == null ? "vs" : `${home} — ${away}`;
+  }
+
+  async function footballData(path) {
+    if (!LIVE_DATA_CONFIG.token) throw new Error("Missing football-data.org token");
+    const url = `${LIVE_DATA_CONFIG.baseUrl}${path}`;
+    const response = await fetch(url, { headers: { "X-Auth-Token": LIVE_DATA_CONFIG.token } });
+    if (!response.ok) throw new Error(`${LIVE_DATA_CONFIG.provider} ${response.status}`);
+    return response.json();
+  }
+
+  async function staticData() {
+    const response = await fetch(`${LIVE_DATA_CONFIG.staticDataUrl}?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Static data ${response.status}`);
+    return response.json();
+  }
+
+  function renderFixtures(matches) {
+    if (!matches?.length) return;
+    const groups = [...matches].sort((a, b) => matchDate(a) - matchDate(b)).reduce((acc, match) => {
+      const key = isLive(match) ? "Live Now" : matchDate(match).toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+      acc[key] = acc[key] || [];
+      acc[key].push(match);
+      return acc;
+    }, {});
+
+    document.getElementById("fixtures").innerHTML = `
+      <div class="updated-bar"><span class="live-dot"></span>Last updated: <span id="update-time">${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span></div>
+      ${Object.entries(groups).map(([label, groupMatches]) => `
+        <div class="date-group">
+          <div class="date-label">${escapeHTML(label)}</div>
+          ${groupMatches.map(match => {
+            const home = match.homeTeam || {};
+            const away = match.awayTeam || {};
+            const scoreClass = isLive(match) ? "live" : match.status === "FINISHED" ? "final" : "upcoming";
+            const statusClass = isLive(match) ? "status-live" : match.status === "FINISHED" ? "status-ft" : "status-time";
+            return `
+              <div class="match-card">
+                <div class="match-meta">
+                  <span class="match-stage">${escapeHTML(stageLabel(match))}</span>
+                  <span class="match-venue">🏟 ${escapeHTML(match.venue || "TBD")}</span>
+                </div>
+                <div class="match-row">
+                  <div class="team"><span class="flag">${flagFor(home.name || home.tla)}</span><span class="team-name">${escapeHTML(home.shortName || home.name || "TBD")}</span></div>
+                  <div class="score-box">
+                    <div class="score ${scoreClass}">${escapeHTML(scoreText(match))}</div>
+                    <div class="match-status ${statusClass}">${escapeHTML(statusText(match))}</div>
+                  </div>
+                  <div class="team right"><span class="team-name">${escapeHTML(away.shortName || away.name || "TBD")}</span><span class="flag">${flagFor(away.name || away.tla)}</span></div>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      `).join("")}
+    `;
+  }
+
+  function renderStandings(standings) {
+    if (!standings?.length) return;
+    document.getElementById("standings").innerHTML = standings.map(group => `
+      <div class="group-block">
+        <div class="group-header">🏆 ${escapeHTML(group.group || group.stage || "Standings")}</div>
+        <table>
+          <thead>
+            <tr><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr>
+          </thead>
+          <tbody>
+            ${(group.table || []).map(row => {
+              const gd = row.goalDifference ?? ((row.goalsFor || 0) - (row.goalsAgainst || 0));
+              return `
+                <tr>
+                  <td><div class="team-cell"><span class="pos ${row.position <= 2 ? "q" : ""}">${row.position}</span><span>${flagFor(row.team?.name || row.team?.tla)}</span><span>${escapeHTML(row.team?.shortName || row.team?.name || "TBD")}</span></div></td>
+                  <td>${row.playedGames ?? 0}</td><td>${row.won ?? 0}</td><td>${row.draw ?? 0}</td><td>${row.lost ?? 0}</td>
+                  <td class="${gd >= 0 ? "gd-pos" : "gd-neg"}">${gd > 0 ? "+" : ""}${gd}</td><td class="pts">${row.points ?? 0}</td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+    `).join("");
+  }
+
+  function renderScorers(scorers) {
+    if (!scorers?.length) return;
+    const top = scorers.slice(0, 10).map((item, index) => ({
+      rank: index + 1,
+      name: item.player?.name || "Unknown player",
+      country: `${flagFor(item.team?.name || item.player?.nationality)} ${item.team?.shortName || item.team?.name || item.player?.nationality || ""}`.trim(),
+      avatar: "⚽",
+      stat1: `${item.goals ?? 0} goals`,
+      stat2: `${item.assists ?? 0} assists`,
+      stat3: `${item.penalties ?? 0} pens`
+    }));
+    const assists = [...scorers].sort((a, b) => (b.assists || 0) - (a.assists || 0)).slice(0, 10).map((item, index) => ({
+      rank: index + 1,
+      name: item.player?.name || "Unknown player",
+      country: `${flagFor(item.team?.name || item.player?.nationality)} ${item.team?.shortName || item.team?.name || item.player?.nationality || ""}`.trim(),
+      avatar: "🎯",
+      stat1: `${item.assists ?? 0} assists`,
+      stat2: `${item.goals ?? 0} goals`,
+      stat3: `${item.penalties ?? 0} pens`
+    }));
+    playerData = { ...playerData, goals: top, assists };
+    renderPlayers(activePlayerCategory);
+  }
+
+  async function loadLiveData() {
+    if (!LIVE_DATA_CONFIG.enabled || !LIVE_DATA_CONFIG.token) {
+      try {
+        const data = await staticData();
+        const connected = renderLivePayload(data);
+        setUpdateTime(connected && data.generatedAt ? new Date(data.generatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "Demo data");
+        return connected;
+      } catch (error) {
+        setUpdateTime("Demo data");
+        return false;
+      }
+    }
+
+    try {
+      const data = await staticData();
+      const connected = renderLivePayload(data);
+      if (connected) {
+        setUpdateTime(data.generatedAt ? new Date(data.generatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : undefined);
+        return true;
+      }
+    } catch (error) {
+      console.info("Static data not available, trying direct API token.");
+    }
+
+    return loadDirectApiData();
+  }
+
+  function renderLivePayload(data) {
+    if (!data) return false;
+    if (data.matches?.length) renderFixtures(data.matches);
+    if (data.standings?.length) renderStandings(data.standings);
+    if (data.scorers?.length) renderScorers(data.scorers);
+    return Boolean(data.matches?.length || data.standings?.length || data.scorers?.length);
+  }
+
+  async function loadDirectApiData() {
+    if (!LIVE_DATA_CONFIG.token) {
+      setUpdateTime("Demo data");
+      return false;
+    }
+
+    const suffix = `season=${LIVE_DATA_CONFIG.season}`;
+    const [matches, standings, scorers] = await Promise.allSettled([
+      footballData(`/competitions/${LIVE_DATA_CONFIG.competition}/matches?${suffix}`),
+      footballData(`/competitions/${LIVE_DATA_CONFIG.competition}/standings?${suffix}`),
+      footballData(`/competitions/${LIVE_DATA_CONFIG.competition}/scorers?${suffix}&limit=20`)
+    ]);
+
+    if (matches.status === "fulfilled") renderFixtures(matches.value.matches);
+    if (standings.status === "fulfilled") renderStandings(standings.value.standings);
+    if (scorers.status === "fulfilled") renderScorers(scorers.value.scorers);
+    const connected = [matches, standings, scorers].some(result => result.status === "fulfilled");
+    setUpdateTime(connected ? undefined : "Demo data");
+
+    return connected;
+  }
 
   function filterPlayers(cat, el) {
+    activePlayerCategory = cat;
     document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
     el.classList.add('active');
     renderPlayers(cat);
@@ -618,15 +843,15 @@
     const list = document.getElementById('player-list');
     list.innerHTML = playerData[cat].map((p, i) => `
       <div class="player-card">
-        <div class="player-rank ${rankClass[i]}">#${p.rank}</div>
+        <div class="player-rank ${rankClass[i] || ""}">#${p.rank}</div>
         <div class="player-avatar">${p.avatar}</div>
         <div class="player-info">
-          <div class="player-name">${p.name}</div>
-          <div class="player-country">${p.country}</div>
+          <div class="player-name">${escapeHTML(p.name)}</div>
+          <div class="player-country">${escapeHTML(p.country)}</div>
           <div class="player-stats">
-            <span class="stat-pill"><span class="stat-val">${p.stat1}</span></span>
-            <span class="stat-pill"><span class="stat-val">${p.stat2}</span></span>
-            <span class="stat-pill"><span class="stat-val">${p.stat3}</span></span>
+            <span class="stat-pill"><span class="stat-val">${escapeHTML(p.stat1)}</span></span>
+            <span class="stat-pill"><span class="stat-val">${escapeHTML(p.stat2)}</span></span>
+            <span class="stat-pill"><span class="stat-val">${escapeHTML(p.stat3)}</span></span>
           </div>
         </div>
       </div>
@@ -640,25 +865,23 @@
     event.target.classList.add('active');
   }
 
-  function setUpdateTime() {
+  function setUpdateTime(label) {
     const now = new Date();
-    const t = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const t = label || now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     document.querySelectorAll('#update-time, .update-time-s').forEach(el => el.textContent = t);
   }
 
-  function refreshData() {
+  async function refreshData() {
     const icon = document.getElementById('refresh-icon');
     icon.classList.add('spin');
-    setTimeout(() => {
+    try {
+      await loadLiveData();
+    } catch (error) {
+      console.warn("Live data refresh failed:", error);
+      setUpdateTime("Demo data");
+    } finally {
       icon.classList.remove('spin');
-      setUpdateTime();
-      // Simulate score tick for live match
-      const liveScore = document.getElementById('score-live-1');
-      if (liveScore) {
-        const scores = ["2 — 1","2 — 2","3 — 2","2 — 1"];
-        liveScore.textContent = scores[Math.floor(Math.random()*scores.length)];
-      }
-    }, 1200);
+    }
   }
 
   // Auto-refresh every 60 seconds
@@ -667,6 +890,7 @@
   // Init
   setUpdateTime();
   renderPlayers('goals');
+  refreshData();
 </script>
 </body>
 </html>
