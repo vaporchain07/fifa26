@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FIFA World Cup 2026</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card: #111827;
+    --card2: #1a2235;
+    --accent: #00d4ff;
+    --gold: #ffd700;
+    --green: #22c55e;
+    --red: #ef4444;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --border: #1e2d45;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; }
+
+  header {
+    background: linear-gradient(135deg, #0a0e1a 0%, #0d1f3c 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px 8px;
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 8px; }
+  .logo svg { width: 28px; height: 28px; }
+  .logo-text { font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; }
+  .logo-sub { font-size: 10px; color: var(--muted); }
+  .refresh-btn {
+    background: var(--card2); border: 1px solid var(--border); color: var(--accent);
+    padding: 5px 10px; border-radius: 6px; font-size: 11px; cursor: pointer;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .refresh-btn:active { opacity: 0.7; }
+  .spin { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .tabs {
+    display: flex; overflow-x: auto; scrollbar-width: none;
+    background: var(--card); border-bottom: 1px solid var(--border);
+    position: sticky; top: 57px; z-index: 99;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex-shrink: 0; padding: 10px 16px; font-size: 12px; font-weight: 600;
+    color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent;
+    transition: all 0.2s; white-space: nowrap;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .section { display: none; padding: 10px; }
+  .section.active { display: block; }
+
+  /* Last updated */
+  .updated-bar {
+    text-align: center; font-size: 10px; color: var(--muted);
+    padding: 4px; background: var(--card2); border-radius: 4px; margin-bottom: 8px;
+  }
+  .live-dot { display: inline-block; width: 6px; height: 6px; background: var(--red); border-radius: 50%; margin-right: 4px; animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* FIXTURES */
+  .date-group { margin-bottom: 14px; }
+  .date-label { font-size: 10px; font-weight: 700; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; padding: 4px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+  .match-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px; margin-bottom: 6px;
+  }
+  .match-meta { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+  .match-venue { display: flex; align-items: center; gap: 3px; }
+  .match-row { display: flex; align-items: center; justify-content: space-between; }
+  .team { display: flex; align-items: center; gap: 6px; width: 38%; }
+  .team.right { flex-direction: row-reverse; text-align: right; }
+  .flag { font-size: 18px; line-height: 1; }
+  .team-name { font-size: 12px; font-weight: 600; }
+  .score-box { text-align: center; min-width: 60px; }
+  .score { font-size: 20px; font-weight: 800; letter-spacing: 2px; }
+  .score.live { color: var(--accent); }
+  .score.final { color: var(--text); }
+  .score.upcoming { color: var(--muted); font-size: 14px; }
+  .match-status { font-size: 10px; margin-top: 2px; }
+  .status-live { color: var(--red); font-weight: 700; }
+  .status-ft { color: var(--muted); }
+  .status-time { color: var(--accent); }
+  .match-stage { font-size: 9px; background: var(--card2); color: var(--accent); padding: 2px 6px; border-radius: 10px; }
+
+  /* STANDINGS */
+  .group-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+  .group-header { background: var(--card2); padding: 8px 10px; font-size: 11px; font-weight: 700; color: var(--accent); display: flex; align-items: center; gap: 6px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { font-size: 9px; color: var(--muted); text-transform: uppercase; padding: 5px 6px; text-align: center; border-bottom: 1px solid var(--border); letter-spacing: 0.5px; }
+  thead th:first-child { text-align: left; padding-left: 10px; }
+  tbody td { padding: 7px 6px; text-align: center; border-bottom: 1px solid #151e2e; font-size: 11px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td:first-child { text-align: left; padding-left: 10px; }
+  .team-cell { display: flex; align-items: center; gap: 6px; }
+  .pos { width: 14px; font-size: 10px; color: var(--muted); }
+  .pos.q { color: var(--green); font-weight: 700; }
+  .pts { font-weight: 800; color: var(--accent); }
+  .gd-pos { color: var(--green); }
+  .gd-neg { color: var(--red); }
+
+  /* TOP PLAYERS */
+  .player-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px;
+  }
+  .player-rank { font-size: 22px; font-weight: 900; color: var(--border); min-width: 30px; }
+  .player-rank.r1 { color: var(--gold); }
+  .player-rank.r2 { color: #c0c0c0; }
+  .player-rank.r3 { color: #cd7f32; }
+  .player-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--card2); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; border: 2px solid var(--border); }
+  .player-info { flex: 1; }
+  .player-name { font-size: 13px; font-weight: 700; }
+  .player-country { font-size: 10px; color: var(--muted); margin-top: 1px; }
+  .player-stats { display: flex; gap: 10px; margin-top: 6px; }
+  .stat-pill { background: var(--card2); border-radius: 10px; padding: 3px 8px; font-size: 10px; display: flex; align-items: center; gap: 3px; }
+  .stat-val { font-weight: 700; color: var(--accent); }
+  .category-tabs { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .cat-tab { background: var(--card); border: 1px solid var(--border); color: var(--muted); padding: 5px 10px; border-radius: 20px; font-size: 11px; cursor: pointer; }
+  .cat-tab.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
+
+  /* VENUES */
+  .venue-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 12px; margin-bottom: 6px; display: flex; gap: 10px; align-items: center;
+  }
+  .venue-flag { font-size: 28px; }
+  .venue-info { flex: 1; }
+  .venue-name { font-size: 12px; font-weight: 700; }
+  .venue-city { font-size: 10px; color: var(--muted); }
+  .venue-cap { font-size: 10px; color: var(--accent); margin-top: 2px; }
+  .venue-matches { font-size: 10px; background: var(--card2); padding: 2px 6px; border-radius: 10px; color: var(--text); white-space: nowrap; }
+
+  .section-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin: 10px 0 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="18" fill="#0d1f3c" stroke="#00d4ff" stroke-width="1.5"/>
+      <path d="M20 8 L23 16 L32 16 L25 21 L27 29 L20 24 L13 29 L15 21 L8 16 L17 16 Z" fill="#ffd700"/>
+    </svg>
+    <div>
+      <div class="logo-text">WC 2026</div>
+      <div class="logo-sub">USA · CAN · MEX</div>
+    </div>
+  </div>
+  <button class="refresh-btn" onclick="refreshData()">
+    <span id="refresh-icon">↻</span> Refresh
+  </button>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('fixtures')">⚽ Fixtures</div>
+  <div class="tab" onclick="showTab('standings')">📊 Standings</div>
+  <div class="tab" onclick="showTab('players')">🌟 Players</div>
+  <div class="tab" onclick="showTab('venues')">📍 Venues</div>
+</div>
+
+<!-- FIXTURES -->
+<div id="fixtures" class="section active">
+  <div class="updated-bar"><span class="live-dot"></span>Last updated: <span id="update-time">Loading...</span></div>
+
+  <div class="date-group">
+    <div class="date-label">🔴 Live Now</div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group A</span>
+        <span class="match-venue">🏟 SoFi Stadium, LA</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇧🇷</span><span class="team-name">Brazil</span></div>
+        <div class="score-box">
+          <div class="score live" id="score-live-1">2 — 1</div>
+          <div class="match-status status-live">● 67'</div>
+        </div>
+        <div class="team right"><span class="team-name">Mexico</span><span class="flag">🇲🇽</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-label">Today · Jun 10</div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group B</span>
+        <span class="match-venue">🏟 AT&T Stadium, Dallas</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇫🇷</span><span class="team-name">France</span></div>
+        <div class="score-box">
+          <div class="score upcoming">vs</div>
+          <div class="match-status status-time">18:00</div>
+        </div>
+        <div class="team right"><span class="team-name">Argentina</span><span class="flag">🇦🇷</span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group C</span>
+        <span class="match-venue">🏟 MetLife, New York</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="team-name">England</span></div>
+        <div class="score-box">
+          <div class="score upcoming">vs</div>
+          <div class="match-status status-time">21:00</div>
+        </div>
+        <div class="team right"><span class="team-name">Spain</span><span class="flag">🇪🇸</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-label">Yesterday · Jun 9 — Completed</div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group A</span>
+        <span class="match-venue">🏟 Azteca, Mexico City</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇩🇪</span><span class="team-name">Germany</span></div>
+        <div class="score-box">
+          <div class="score final">3 — 1</div>
+          <div class="match-status status-ft">FT</div>
+        </div>
+        <div class="team right"><span class="team-name">Japan</span><span class="flag">🇯🇵</span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group D</span>
+        <span class="match-venue">🏟 BC Place, Vancouver</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇵🇹</span><span class="team-name">Portugal</span></div>
+        <div class="score-box">
+          <div class="score final">2 — 2</div>
+          <div class="match-status status-ft">FT</div>
+        </div>
+        <div class="team right"><span class="team-name">Morocco</span><span class="flag">🇲🇦</span></div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group E</span>
+        <span class="match-venue">🏟 Levi's Stadium, SF</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇳🇱</span><span class="team-name">Netherlands</span></div>
+        <div class="score-box">
+          <div class="score final">1 — 0</div>
+          <div class="match-status status-ft">FT</div>
+        </div>
+        <div class="team right"><span class="team-name">Senegal</span><span class="flag">🇸🇳</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-group">
+    <div class="date-label">Jun 11 — Upcoming</div>
+    <div class="match-card">
+      <div class="match-meta">
+        <span class="match-stage">Group F</span>
+        <span class="match-venue">🏟 Rose Bowl, LA</span>
+      </div>
+      <div class="match-row">
+        <div class="team"><span class="flag">🇺🇸</span><span class="team-name">USA</span></div>
+        <div class="score-box">
+          <div class="score upcoming">vs</div>
+          <div class="match-status status-time">20:00</div>
+        </div>
+        <div class="team right"><span class="team-name">Canada</span><span class="flag">🇨🇦</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STANDINGS -->
+<div id="standings" class="section">
+  <div class="updated-bar"><span class="live-dot"></span>Last updated: <span class="update-time-s">Loading...</span></div>
+
+  <div class="group-block">
+    <div class="group-header">⚽ Group A</div>
+    <table>
+      <thead><tr>
+        <th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">1</span><span>🇩🇪</span><span>Germany</span></div></td>
+          <td>2</td><td>2</td><td>0</td><td>0</td>
+          <td class="gd-pos">+5</td><td class="pts">6</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">2</span><span>🇧🇷</span><span>Brazil</span></div></td>
+          <td>2</td><td>1</td><td>1</td><td>0</td>
+          <td class="gd-pos">+2</td><td class="pts">4</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">3</span><span>🇲🇽</span><span>Mexico</span></div></td>
+          <td>2</td><td>0</td><td>1</td><td>1</td>
+          <td class="gd-neg">-2</td><td class="pts">1</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">4</span><span>🇯🇵</span><span>Japan</span></div></td>
+          <td>2</td><td>0</td><td>0</td><td>2</td>
+          <td class="gd-neg">-5</td><td class="pts">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="group-block">
+    <div class="group-header">⚽ Group B</div>
+    <table>
+      <thead><tr>
+        <th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">1</span><span>🇫🇷</span><span>France</span></div></td>
+          <td>1</td><td>1</td><td>0</td><td>0</td>
+          <td class="gd-pos">+2</td><td class="pts">3</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">2</span><span>🇦🇷</span><span>Argentina</span></div></td>
+          <td>1</td><td>1</td><td>0</td><td>0</td>
+          <td class="gd-pos">+1</td><td class="pts">3</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">3</span><span>🇺🇾</span><span>Uruguay</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-1</td><td class="pts">0</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">4</span><span>🇵🇱</span><span>Poland</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-2</td><td class="pts">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="group-block">
+    <div class="group-header">⚽ Group C</div>
+    <table>
+      <thead><tr>
+        <th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">1</span><span>🇪🇸</span><span>Spain</span></div></td>
+          <td>1</td><td>1</td><td>0</td><td>0</td>
+          <td class="gd-pos">+3</td><td class="pts">3</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">2</span><span>🇭🇷</span><span>Croatia</span></div></td>
+          <td>1</td><td>1</td><td>0</td><td>0</td>
+          <td class="gd-pos">+2</td><td class="pts">3</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">3</span><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span>England</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-2</td><td class="pts">0</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">4</span><span>🇨🇴</span><span>Colombia</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-3</td><td class="pts">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="group-block">
+    <div class="group-header">⚽ Group D</div>
+    <table>
+      <thead><tr>
+        <th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">1</span><span>🇲🇦</span><span>Morocco</span></div></td>
+          <td>1</td><td>0</td><td>1</td><td>0</td>
+          <td>0</td><td class="pts">1</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos q">2</span><span>🇵🇹</span><span>Portugal</span></div></td>
+          <td>1</td><td>0</td><td>1</td><td>0</td>
+          <td>0</td><td class="pts">1</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">3</span><span>🇧🇪</span><span>Belgium</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-1</td><td class="pts">0</td>
+        </tr>
+        <tr>
+          <td><div class="team-cell"><span class="pos">4</span><span>🇨🇦</span><span>Canada</span></div></td>
+          <td>1</td><td>0</td><td>0</td><td>1</td>
+          <td class="gd-neg">-1</td><td class="pts">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:10px;color:var(--muted);text-align:center;padding:8px 0;">
+    <span style="color:var(--green);font-weight:700;">Green</span> = qualified for Round of 32
+  </p>
+</div>
+
+<!-- PLAYERS -->
+<div id="players" class="section">
+  <div class="category-tabs">
+    <div class="cat-tab active" onclick="filterPlayers('goals',this)">⚽ Goals</div>
+    <div class="cat-tab" onclick="filterPlayers('assists',this)">🎯 Assists</div>
+    <div class="cat-tab" onclick="filterPlayers('ratings',this)">⭐ Rating</div>
+  </div>
+
+  <div id="player-list"></div>
+</div>
+
+<!-- VENUES -->
+<div id="venues" class="section">
+  <div class="section-title">🇺🇸 United States</div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">MetLife Stadium</div>
+      <div class="venue-city">East Rutherford, New York</div>
+      <div class="venue-cap">82,500 capacity</div>
+    </div>
+    <span class="venue-matches">Final</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Rose Bowl</div>
+      <div class="venue-city">Pasadena, Los Angeles</div>
+      <div class="venue-cap">92,542 capacity</div>
+    </div>
+    <span class="venue-matches">8 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">SoFi Stadium</div>
+      <div class="venue-city">Inglewood, Los Angeles</div>
+      <div class="venue-cap">70,240 capacity</div>
+    </div>
+    <span class="venue-matches">7 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">AT&T Stadium</div>
+      <div class="venue-city">Arlington, Dallas</div>
+      <div class="venue-cap">80,000 capacity</div>
+    </div>
+    <span class="venue-matches">8 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Levi's Stadium</div>
+      <div class="venue-city">Santa Clara, San Francisco</div>
+      <div class="venue-cap">68,500 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Hard Rock Stadium</div>
+      <div class="venue-city">Miami Gardens, Florida</div>
+      <div class="venue-cap">65,326 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Arrowhead Stadium</div>
+      <div class="venue-city">Kansas City, Missouri</div>
+      <div class="venue-cap">76,416 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Lincoln Financial Field</div>
+      <div class="venue-city">Philadelphia, Pennsylvania</div>
+      <div class="venue-cap">69,796 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">NRG Stadium</div>
+      <div class="venue-city">Houston, Texas</div>
+      <div class="venue-cap">72,220 capacity</div>
+    </div>
+    <span class="venue-matches">7 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Geodis Park</div>
+      <div class="venue-city">Nashville, Tennessee</div>
+      <div class="venue-cap">30,000 capacity</div>
+    </div>
+    <span class="venue-matches">5 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Lumen Field</div>
+      <div class="venue-city">Seattle, Washington</div>
+      <div class="venue-cap">68,740 capacity</div>
+    </div>
+    <span class="venue-matches">5 matches</span>
+  </div>
+
+  <div class="section-title">🇨🇦 Canada</div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">BC Place</div>
+      <div class="venue-city">Vancouver, BC</div>
+      <div class="venue-cap">54,500 capacity</div>
+    </div>
+    <span class="venue-matches">7 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">BMO Field</div>
+      <div class="venue-city">Toronto, Ontario</div>
+      <div class="venue-cap">45,000 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+
+  <div class="section-title">🇲🇽 Mexico</div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Estadio Azteca</div>
+      <div class="venue-city">Mexico City</div>
+      <div class="venue-cap">87,500 capacity</div>
+    </div>
+    <span class="venue-matches">Opening · 8 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Estadio BBVA</div>
+      <div class="venue-city">Monterrey, Nuevo León</div>
+      <div class="venue-cap">53,500 capacity</div>
+    </div>
+    <span class="venue-matches">6 matches</span>
+  </div>
+  <div class="venue-card">
+    <span class="venue-flag">🏟</span>
+    <div class="venue-info">
+      <div class="venue-name">Estadio Akron</div>
+      <div class="venue-city">Guadalajara, Jalisco</div>
+      <div class="venue-cap">46,232 capacity</div>
+    </div>
+    <span class="venue-matches">5 matches</span>
+  </div>
+</div>
+
+<script>
+  const playerData = {
+    goals: [
+      { rank: 1, name: "Kylian Mbappé", country: "🇫🇷 France", avatar: "⚡", stat1: "4 goals", stat2: "1 assist", stat3: "8.9 avg" },
+      { rank: 2, name: "Erling Haaland", country: "🇳🇴 Norway", avatar: "🦁", stat1: "3 goals", stat2: "0 assists", stat3: "8.5 avg" },
+      { rank: 3, name: "Lamine Yamal", country: "🇪🇸 Spain", avatar: "⭐", stat1: "3 goals", stat2: "2 assists", stat3: "9.1 avg" },
+    ],
+    assists: [
+      { rank: 1, name: "Lamine Yamal", country: "🇪🇸 Spain", avatar: "⭐", stat1: "2 assists", stat2: "3 goals", stat3: "9.1 avg" },
+      { rank: 2, name: "Jude Bellingham", country: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", avatar: "🎯", stat1: "2 assists", stat2: "1 goal", stat3: "8.7 avg" },
+      { rank: 3, name: "Pedri", country: "🇪🇸 Spain", avatar: "🎨", stat1: "2 assists", stat2: "1 goal", stat3: "8.6 avg" },
+    ],
+    ratings: [
+      { rank: 1, name: "Lionel Messi", country: "🇦🇷 Argentina", avatar: "🐐", stat1: "9.4 avg", stat2: "2 goals", stat3: "2 assists" },
+      { rank: 2, name: "Lamine Yamal", country: "🇪🇸 Spain", avatar: "⭐", stat1: "9.1 avg", stat2: "3 goals", stat3: "2 assists" },
+      { rank: 3, name: "Kylian Mbappé", country: "🇫🇷 France", avatar: "⚡", stat1: "8.9 avg", stat2: "4 goals", stat3: "1 assist" },
+    ]
+  };
+
+  const rankClass = ["r1","r2","r3"];
+
+  function filterPlayers(cat, el) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    renderPlayers(cat);
+  }
+
+  function renderPlayers(cat) {
+    const list = document.getElementById('player-list');
+    list.innerHTML = playerData[cat].map((p, i) => `
+      <div class="player-card">
+        <div class="player-rank ${rankClass[i]}">#${p.rank}</div>
+        <div class="player-avatar">${p.avatar}</div>
+        <div class="player-info">
+          <div class="player-name">${p.name}</div>
+          <div class="player-country">${p.country}</div>
+          <div class="player-stats">
+            <span class="stat-pill"><span class="stat-val">${p.stat1}</span></span>
+            <span class="stat-pill"><span class="stat-val">${p.stat2}</span></span>
+            <span class="stat-pill"><span class="stat-val">${p.stat3}</span></span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function setUpdateTime() {
+    const now = new Date();
+    const t = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.querySelectorAll('#update-time, .update-time-s').forEach(el => el.textContent = t);
+  }
+
+  function refreshData() {
+    const icon = document.getElementById('refresh-icon');
+    icon.classList.add('spin');
+    setTimeout(() => {
+      icon.classList.remove('spin');
+      setUpdateTime();
+      // Simulate score tick for live match
+      const liveScore = document.getElementById('score-live-1');
+      if (liveScore) {
+        const scores = ["2 — 1","2 — 2","3 — 2","2 — 1"];
+        liveScore.textContent = scores[Math.floor(Math.random()*scores.length)];
+      }
+    }, 1200);
+  }
+
+  // Auto-refresh every 60 seconds
+  setInterval(refreshData, 60000);
+
+  // Init
+  setUpdateTime();
+  renderPlayers('goals');
+</script>
+</body>
+</html>
