@@ -180,8 +180,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇧🇷</span><span class="team-name">Brazil</span></div>
         <div class="score-box">
-          <div class="score live" id="score-live-1">2 — 1</div>
-          <div class="match-status status-live">● 67'</div>
+          <div class="score upcoming" id="score-live-1">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Mexico</span><span class="flag">🇲🇽</span></div>
       </div>
@@ -199,8 +199,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇫🇷</span><span class="team-name">France</span></div>
         <div class="score-box">
-          <div class="score upcoming">vs</div>
-          <div class="match-status status-time">02:00</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Argentina</span><span class="flag">🇦🇷</span></div>
       </div>
@@ -214,8 +214,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="team-name">England</span></div>
         <div class="score-box">
-          <div class="score upcoming">vs</div>
-          <div class="match-status status-time">04:00</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Spain</span><span class="flag">🇪🇸</span></div>
       </div>
@@ -233,8 +233,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇩🇪</span><span class="team-name">Germany</span></div>
         <div class="score-box">
-          <div class="score final">3 — 1</div>
-          <div class="match-status status-ft">FT</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Japan</span><span class="flag">🇯🇵</span></div>
       </div>
@@ -248,8 +248,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇵🇹</span><span class="team-name">Portugal</span></div>
         <div class="score-box">
-          <div class="score final">2 — 2</div>
-          <div class="match-status status-ft">FT</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Morocco</span><span class="flag">🇲🇦</span></div>
       </div>
@@ -263,8 +263,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇳🇱</span><span class="team-name">Netherlands</span></div>
         <div class="score-box">
-          <div class="score final">1 — 0</div>
-          <div class="match-status status-ft">FT</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Senegal</span><span class="flag">🇸🇳</span></div>
       </div>
@@ -281,8 +281,8 @@
       <div class="match-row">
         <div class="team"><span class="flag">🇺🇸</span><span class="team-name">USA</span></div>
         <div class="score-box">
-          <div class="score upcoming">vs</div>
-          <div class="match-status status-time">06:00</div>
+          <div class="score upcoming">—</div>
+          <div class="match-status status-time">Fetching</div>
         </div>
         <div class="team right"><span class="team-name">Canada</span><span class="flag">🇨🇦</span></div>
       </div>
@@ -713,7 +713,7 @@
     const regularTime = match.score?.regularTime || {};
     const home = fullTime.home ?? regularTime.home;
     const away = fullTime.away ?? regularTime.away;
-    return home == null || away == null ? "vs" : `${home} — ${away}`;
+    return home == null || away == null ? "—" : `${home} — ${away}`;
   }
 
   function matchVenue(match) {
