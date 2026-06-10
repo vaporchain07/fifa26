@@ -189,7 +189,7 @@
   </div>
 
   <div class="date-group">
-    <div class="date-label">Today · Jun 10</div>
+    <div class="date-label">Jun 11 · Helsinki time</div>
 
     <div class="match-card">
       <div class="match-meta">
@@ -200,7 +200,7 @@
         <div class="team"><span class="flag">🇫🇷</span><span class="team-name">France</span></div>
         <div class="score-box">
           <div class="score upcoming">vs</div>
-          <div class="match-status status-time">18:00</div>
+          <div class="match-status status-time">02:00 Helsinki</div>
         </div>
         <div class="team right"><span class="team-name">Argentina</span><span class="flag">🇦🇷</span></div>
       </div>
@@ -215,7 +215,7 @@
         <div class="team"><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="team-name">England</span></div>
         <div class="score-box">
           <div class="score upcoming">vs</div>
-          <div class="match-status status-time">21:00</div>
+          <div class="match-status status-time">04:00 Helsinki</div>
         </div>
         <div class="team right"><span class="team-name">Spain</span><span class="flag">🇪🇸</span></div>
       </div>
@@ -272,7 +272,7 @@
   </div>
 
   <div class="date-group">
-    <div class="date-label">Jun 11 — Upcoming</div>
+    <div class="date-label">Jun 12 · Helsinki time</div>
     <div class="match-card">
       <div class="match-meta">
         <span class="match-stage">Group F</span>
@@ -282,7 +282,7 @@
         <div class="team"><span class="flag">🇺🇸</span><span class="team-name">USA</span></div>
         <div class="score-box">
           <div class="score upcoming">vs</div>
-          <div class="match-status status-time">20:00</div>
+          <div class="match-status status-time">06:00 Helsinki</div>
         </div>
         <div class="team right"><span class="team-name">Canada</span><span class="flag">🇨🇦</span></div>
       </div>
@@ -595,6 +595,8 @@
     competition: "WC",
     season: 2026,
     staticDataUrl: "data/world-cup.json",
+    displayTimeZone: "Europe/Helsinki",
+    displayTimeZoneLabel: "Helsinki",
     token: window.FOOTBALL_DATA_TOKEN || localStorage.getItem("footballDataToken") || ""
   };
 
@@ -651,6 +653,24 @@
     return new Date(match.utcDate);
   }
 
+  function formatHelsinkiTime(date) {
+    return date.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: LIVE_DATA_CONFIG.displayTimeZone
+    });
+  }
+
+  function formatHelsinkiDate(date) {
+    return date.toLocaleDateString([], {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      timeZone: LIVE_DATA_CONFIG.displayTimeZone
+    });
+  }
+
   function isLive(match) {
     return ["IN_PLAY", "LIVE", "PAUSED"].includes(match.status);
   }
@@ -659,7 +679,7 @@
     if (isLive(match)) return "● Live";
     if (match.status === "FINISHED") return "FT";
     if (match.status === "POSTPONED") return "Postponed";
-    return matchDate(match).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    return `${formatHelsinkiTime(matchDate(match))} ${LIVE_DATA_CONFIG.displayTimeZoneLabel}`;
   }
 
   function scoreText(match) {
@@ -687,14 +707,14 @@
   function renderFixtures(matches) {
     if (!matches?.length) return;
     const groups = [...matches].sort((a, b) => matchDate(a) - matchDate(b)).reduce((acc, match) => {
-      const key = isLive(match) ? "Live Now" : matchDate(match).toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+      const key = isLive(match) ? "Live Now" : `${formatHelsinkiDate(matchDate(match))} · ${LIVE_DATA_CONFIG.displayTimeZoneLabel}`;
       acc[key] = acc[key] || [];
       acc[key].push(match);
       return acc;
     }, {});
 
     document.getElementById("fixtures").innerHTML = `
-      <div class="updated-bar"><span class="live-dot"></span>Last updated: <span id="update-time">${new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span></div>
+      <div class="updated-bar"><span class="live-dot"></span>Last updated: <span id="update-time">${formatHelsinkiTime(new Date())} ${LIVE_DATA_CONFIG.displayTimeZoneLabel}</span></div>
       ${Object.entries(groups).map(([label, groupMatches]) => `
         <div class="date-group">
           <div class="date-label">${escapeHTML(label)}</div>
@@ -780,7 +800,7 @@
       try {
         const data = await staticData();
         const connected = renderLivePayload(data);
-        setUpdateTime(connected && data.generatedAt ? new Date(data.generatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "Demo data");
+        setUpdateTime(connected && data.generatedAt ? `${formatHelsinkiTime(new Date(data.generatedAt))} ${LIVE_DATA_CONFIG.displayTimeZoneLabel}` : "Demo data");
         return connected;
       } catch (error) {
         setUpdateTime("Demo data");
@@ -792,7 +812,7 @@
       const data = await staticData();
       const connected = renderLivePayload(data);
       if (connected) {
-        setUpdateTime(data.generatedAt ? new Date(data.generatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : undefined);
+        setUpdateTime(data.generatedAt ? `${formatHelsinkiTime(new Date(data.generatedAt))} ${LIVE_DATA_CONFIG.displayTimeZoneLabel}` : undefined);
         return true;
       }
     } catch (error) {
@@ -867,7 +887,7 @@
 
   function setUpdateTime(label) {
     const now = new Date();
-    const t = label || now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const t = label || `${formatHelsinkiTime(now)} ${LIVE_DATA_CONFIG.displayTimeZoneLabel}`;
     document.querySelectorAll('#update-time, .update-time-s').forEach(el => el.textContent = t);
   }
 
