@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-14T16:17:44.454Z",
+  "generatedAt": "2026-06-14T17:55:35.128Z",
   "matches": [
     {
       "area": {
@@ -555,11 +555,11 @@
       },
       "id": 537351,
       "utcDate": "2026-06-14T17:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-13T15:20:17Z",
+      "lastUpdated": "2026-06-14T17:53:53Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -575,11 +575,11 @@
         "crest": "https://crests.football-data.org/curacao.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
           "home": null,
@@ -9485,6 +9485,99 @@
         "clubColors": "Gold / Green",
         "venue": null,
         "lastUpdated": "2021-05-22T11:30:43Z"
+      },
+      "playedMatches": 1,
+      "goals": 1,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 101074,
+        "name": "Felix Kalu Nmecha",
+        "firstName": "Felix",
+        "lastName": "Nmecha",
+        "dateOfBirth": "2000-10-10",
+        "nationality": "Germany",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:31Z"
+      },
+      "team": {
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg",
+        "address": "Otto-Fleck-Schneise 6 / Postfach 710265 Frankfurt am Main 60492",
+        "website": "http://www.dfb.de",
+        "founded": 1900,
+        "clubColors": "White / Black",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:41:12Z"
+      },
+      "playedMatches": 1,
+      "goals": 1,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 166156,
+        "name": "Livano Comenencia",
+        "firstName": "Livano",
+        "lastName": "Comenencia",
+        "dateOfBirth": "2004-02-03",
+        "nationality": "Curaçao",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2025-11-05T09:45:41Z"
+      },
+      "team": {
+        "id": 9460,
+        "name": "Curaçao",
+        "shortName": "Curaçao",
+        "tla": "CUW",
+        "crest": "https://crests.football-data.org/curacao.svg",
+        "address": "null null null",
+        "website": null,
+        "founded": null,
+        "clubColors": null,
+        "venue": null,
+        "lastUpdated": "2026-05-19T17:48:28Z"
+      },
+      "playedMatches": 1,
+      "goals": 1,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 75539,
+        "name": "Nico Schlotterbeck",
+        "firstName": "Nico",
+        "lastName": "Schlotterbeck",
+        "dateOfBirth": "1999-12-01",
+        "nationality": "Germany",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:31Z"
+      },
+      "team": {
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg",
+        "address": "Otto-Fleck-Schneise 6 / Postfach 710265 Frankfurt am Main 60492",
+        "website": "http://www.dfb.de",
+        "founded": 1900,
+        "clubColors": "White / Black",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:41:12Z"
       },
       "playedMatches": 1,
       "goals": 1,
