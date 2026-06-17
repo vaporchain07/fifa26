@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-17T19:21:30.496Z",
+  "generatedAt": "2026-06-17T21:27:25.327Z",
   "matches": [
     {
       "area": {
@@ -1351,7 +1351,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-17T19:04:13Z",
+      "lastUpdated": "2026-06-17T19:57:01Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -1413,11 +1413,11 @@
       },
       "id": 537409,
       "utcDate": "2026-06-17T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-12T15:20:17Z",
+      "lastUpdated": "2026-06-17T21:27:04Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
@@ -1433,15 +1433,15 @@
         "crest": "https://crests.football-data.org/799.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         }
       },
       "odds": {
@@ -1513,7 +1513,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 30960,
+          "name": "Glenn Nyberg",
+          "type": "REFEREE",
+          "nationality": "Sweden"
+        }
+      ]
     },
     {
       "area": {
@@ -9274,6 +9281,37 @@
     },
     {
       "player": {
+        "id": 8004,
+        "name": "Harry Kane",
+        "firstName": "Harry",
+        "lastName": "Kane",
+        "dateOfBirth": "1993-07-28",
+        "nationality": "England",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:29Z"
+      },
+      "team": {
+        "id": 770,
+        "name": "England",
+        "shortName": "England",
+        "tla": "ENG",
+        "crest": "https://crests.football-data.org/770.svg",
+        "address": "Wembley Stadium, PO Box 1966 London SW1P 9EQ",
+        "website": "http://www.thefa.com",
+        "founded": 1863,
+        "clubColors": "White / Red / Navy Blue",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:05Z"
+      },
+      "playedMatches": 1,
+      "goals": 2,
+      "assists": null,
+      "penalties": 1
+    },
+    {
+      "player": {
         "id": 39237,
         "name": "Julián Quiñones",
         "firstName": "Julián",
@@ -9638,37 +9676,6 @@
         "clubColors": "Red / Green",
         "venue": null,
         "lastUpdated": "2022-04-02T10:40:28Z"
-      },
-      "playedMatches": 1,
-      "goals": 1,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 1556,
-        "name": "Vinicius Junior",
-        "firstName": "",
-        "lastName": "Vinícius Junior",
-        "dateOfBirth": "2000-07-12",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:32Z"
-      },
-      "team": {
-        "id": 764,
-        "name": "Brazil",
-        "shortName": "Brazil",
-        "tla": "BRA",
-        "crest": "https://crests.football-data.org/764.svg",
-        "address": "Rua Victor Civita 66 Bloco 1, Edifico 5 Rio de Janeiro, RJ 22775-044",
-        "website": "http://www.cbf.com.br/",
-        "founded": 1914,
-        "clubColors": "Yellow / Green / Blue",
-        "venue": null,
-        "lastUpdated": "2021-05-22T11:31:45Z"
       },
       "playedMatches": 1,
       "goals": 1,
