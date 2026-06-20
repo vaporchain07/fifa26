@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-20T06:57:18.927Z",
+  "generatedAt": "2026-06-20T10:09:02.376Z",
   "matches": [
     {
       "area": {
@@ -1879,7 +1879,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-19T23:05:10Z",
+      "lastUpdated": "2026-06-20T08:25:01Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -1945,7 +1945,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-20T02:03:52Z",
+      "lastUpdated": "2026-06-20T08:25:00Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -2011,7 +2011,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-20T02:37:13Z",
+      "lastUpdated": "2026-06-20T08:25:00Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -2077,7 +2077,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-20T05:13:40Z",
+      "lastUpdated": "2026-06-20T08:25:01Z",
       "homeTeam": {
         "id": 803,
         "name": "Turkey",
