@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-20T17:53:00.438Z",
+  "generatedAt": "2026-06-20T19:15:26.196Z",
   "matches": [
     {
       "area": {
@@ -2139,11 +2139,11 @@
       },
       "id": 537359,
       "utcDate": "2026-06-20T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-20T17:52:22Z",
+      "lastUpdated": "2026-06-20T19:02:08Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -2162,12 +2162,12 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
-          "away": 0
+          "home": 5,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         }
       },
       "odds": {
@@ -2239,7 +2239,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 116383,
+          "name": "Juan Benítez",
+          "type": "REFEREE",
+          "nationality": "Paraguay"
+        }
+      ]
     },
     {
       "area": {
@@ -6438,6 +6445,25 @@
         {
           "position": 4,
           "team": {
+            "id": 8601,
+            "name": "Netherlands",
+            "shortName": "Netherlands",
+            "tla": "NED",
+            "crest": "https://crests.football-data.org/8601.svg"
+          },
+          "playedGames": 2,
+          "form": "W,D",
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 7,
+          "goalsAgainst": 3,
+          "goalDifference": 4
+        },
+        {
+          "position": 5,
+          "team": {
             "id": 788,
             "name": "Switzerland",
             "shortName": "Switzerland",
@@ -6455,7 +6481,7 @@
           "goalDifference": 3
         },
         {
-          "position": 5,
+          "position": 6,
           "team": {
             "id": 764,
             "name": "Brazil",
@@ -6474,7 +6500,7 @@
           "goalDifference": 3
         },
         {
-          "position": 6,
+          "position": 7,
           "team": {
             "id": 815,
             "name": "Morocco",
@@ -6493,7 +6519,7 @@
           "goalDifference": 1
         },
         {
-          "position": 7,
+          "position": 8,
           "team": {
             "id": 759,
             "name": "Germany",
@@ -6510,25 +6536,6 @@
           "goalsFor": 7,
           "goalsAgainst": 1,
           "goalDifference": 6
-        },
-        {
-          "position": 8,
-          "team": {
-            "id": 792,
-            "name": "Sweden",
-            "shortName": "Sweden",
-            "tla": "SWE",
-            "crest": "https://crests.football-data.org/792.svg"
-          },
-          "playedGames": 1,
-          "form": "W",
-          "won": 1,
-          "draw": 0,
-          "lost": 0,
-          "points": 3,
-          "goalsFor": 5,
-          "goalsAgainst": 1,
-          "goalDifference": 4
         },
         {
           "position": 9,
@@ -6685,6 +6692,25 @@
         {
           "position": 17,
           "team": {
+            "id": 792,
+            "name": "Sweden",
+            "shortName": "Sweden",
+            "tla": "SWE",
+            "crest": "https://crests.football-data.org/792.svg"
+          },
+          "playedGames": 2,
+          "form": "L,W",
+          "won": 1,
+          "draw": 0,
+          "lost": 1,
+          "points": 3,
+          "goalsFor": 6,
+          "goalsAgainst": 6,
+          "goalDifference": 0
+        },
+        {
+          "position": 18,
+          "team": {
             "id": 772,
             "name": "South Korea",
             "shortName": "Korea Republic",
@@ -6702,7 +6728,7 @@
           "goalDifference": 0
         },
         {
-          "position": 18,
+          "position": 19,
           "team": {
             "id": 779,
             "name": "Australia",
@@ -6721,7 +6747,7 @@
           "goalDifference": 0
         },
         {
-          "position": 19,
+          "position": 20,
           "team": {
             "id": 8873,
             "name": "Scotland",
@@ -6740,7 +6766,7 @@
           "goalDifference": 0
         },
         {
-          "position": 20,
+          "position": 21,
           "team": {
             "id": 761,
             "name": "Paraguay",
@@ -6757,25 +6783,6 @@
           "goalsFor": 2,
           "goalsAgainst": 4,
           "goalDifference": -2
-        },
-        {
-          "position": 21,
-          "team": {
-            "id": 8601,
-            "name": "Netherlands",
-            "shortName": "Netherlands",
-            "tla": "NED",
-            "crest": "https://crests.football-data.org/8601.svg"
-          },
-          "playedGames": 1,
-          "form": "D",
-          "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0
         },
         {
           "position": 22,
@@ -7357,6 +7364,25 @@
         {
           "position": 4,
           "team": {
+            "id": 8601,
+            "name": "Netherlands",
+            "shortName": "Netherlands",
+            "tla": "NED",
+            "crest": "https://crests.football-data.org/8601.svg"
+          },
+          "playedGames": 2,
+          "form": "",
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 7,
+          "goalsAgainst": 3,
+          "goalDifference": 4
+        },
+        {
+          "position": 5,
+          "team": {
             "id": 764,
             "name": "Brazil",
             "shortName": "Brazil",
@@ -7374,7 +7400,7 @@
           "goalDifference": 3
         },
         {
-          "position": 5,
+          "position": 6,
           "team": {
             "id": 759,
             "name": "Germany",
@@ -7393,7 +7419,7 @@
           "goalDifference": 6
         },
         {
-          "position": 6,
+          "position": 7,
           "team": {
             "id": 792,
             "name": "Sweden",
@@ -7412,7 +7438,7 @@
           "goalDifference": 4
         },
         {
-          "position": 7,
+          "position": 8,
           "team": {
             "id": 788,
             "name": "Switzerland",
@@ -7431,7 +7457,7 @@
           "goalDifference": 3
         },
         {
-          "position": 8,
+          "position": 9,
           "team": {
             "id": 762,
             "name": "Argentina",
@@ -7450,7 +7476,7 @@
           "goalDifference": 3
         },
         {
-          "position": 9,
+          "position": 10,
           "team": {
             "id": 770,
             "name": "England",
@@ -7469,7 +7495,7 @@
           "goalDifference": 2
         },
         {
-          "position": 10,
+          "position": 11,
           "team": {
             "id": 773,
             "name": "France",
@@ -7488,7 +7514,7 @@
           "goalDifference": 2
         },
         {
-          "position": 11,
+          "position": 12,
           "team": {
             "id": 816,
             "name": "Austria",
@@ -7507,7 +7533,7 @@
           "goalDifference": 2
         },
         {
-          "position": 12,
+          "position": 13,
           "team": {
             "id": 779,
             "name": "Australia",
@@ -7526,7 +7552,7 @@
           "goalDifference": 2
         },
         {
-          "position": 13,
+          "position": 14,
           "team": {
             "id": 772,
             "name": "South Korea",
@@ -7545,7 +7571,7 @@
           "goalDifference": 1
         },
         {
-          "position": 14,
+          "position": 15,
           "team": {
             "id": 1935,
             "name": "Ivory Coast",
@@ -7564,7 +7590,7 @@
           "goalDifference": 1
         },
         {
-          "position": 15,
+          "position": 16,
           "team": {
             "id": 763,
             "name": "Ghana",
@@ -7581,25 +7607,6 @@
           "goalsFor": 1,
           "goalsAgainst": 0,
           "goalDifference": 1
-        },
-        {
-          "position": 16,
-          "team": {
-            "id": 8601,
-            "name": "Netherlands",
-            "shortName": "Netherlands",
-            "tla": "NED",
-            "crest": "https://crests.football-data.org/8601.svg"
-          },
-          "playedGames": 1,
-          "form": "",
-          "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0
         },
         {
           "position": 17,
@@ -8618,25 +8625,6 @@
         {
           "position": 22,
           "team": {
-            "id": 792,
-            "name": "Sweden",
-            "shortName": "Sweden",
-            "tla": "SWE",
-            "crest": "https://crests.football-data.org/792.svg"
-          },
-          "playedGames": 0,
-          "form": "",
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 23,
-          "team": {
             "id": 760,
             "name": "Spain",
             "shortName": "Spain",
@@ -8654,7 +8642,7 @@
           "goalDifference": 0
         },
         {
-          "position": 24,
+          "position": 23,
           "team": {
             "id": 805,
             "name": "Belgium",
@@ -8673,7 +8661,7 @@
           "goalDifference": 0
         },
         {
-          "position": 25,
+          "position": 24,
           "team": {
             "id": 801,
             "name": "Saudi Arabia",
@@ -8692,7 +8680,7 @@
           "goalDifference": 0
         },
         {
-          "position": 26,
+          "position": 25,
           "team": {
             "id": 840,
             "name": "Iran",
@@ -8711,7 +8699,7 @@
           "goalDifference": 0
         },
         {
-          "position": 27,
+          "position": 26,
           "team": {
             "id": 773,
             "name": "France",
@@ -8730,7 +8718,7 @@
           "goalDifference": 0
         },
         {
-          "position": 28,
+          "position": 27,
           "team": {
             "id": 8062,
             "name": "Iraq",
@@ -8749,7 +8737,7 @@
           "goalDifference": 0
         },
         {
-          "position": 29,
+          "position": 28,
           "team": {
             "id": 762,
             "name": "Argentina",
@@ -8768,7 +8756,7 @@
           "goalDifference": 0
         },
         {
-          "position": 30,
+          "position": 29,
           "team": {
             "id": 816,
             "name": "Austria",
@@ -8787,7 +8775,7 @@
           "goalDifference": 0
         },
         {
-          "position": 31,
+          "position": 30,
           "team": {
             "id": 765,
             "name": "Portugal",
@@ -8806,7 +8794,7 @@
           "goalDifference": 0
         },
         {
-          "position": 32,
+          "position": 31,
           "team": {
             "id": 770,
             "name": "England",
@@ -8825,7 +8813,7 @@
           "goalDifference": 0
         },
         {
-          "position": 33,
+          "position": 32,
           "team": {
             "id": 763,
             "name": "Ghana",
@@ -8844,7 +8832,7 @@
           "goalDifference": 0
         },
         {
-          "position": 34,
+          "position": 33,
           "team": {
             "id": 8070,
             "name": "Uzbekistan",
@@ -8863,7 +8851,7 @@
           "goalDifference": 0
         },
         {
-          "position": 35,
+          "position": 34,
           "team": {
             "id": 798,
             "name": "Czechia",
@@ -8882,7 +8870,7 @@
           "goalDifference": -1
         },
         {
-          "position": 36,
+          "position": 35,
           "team": {
             "id": 772,
             "name": "South Korea",
@@ -8901,7 +8889,7 @@
           "goalDifference": -1
         },
         {
-          "position": 37,
+          "position": 36,
           "team": {
             "id": 791,
             "name": "Ecuador",
@@ -8920,7 +8908,7 @@
           "goalDifference": -1
         },
         {
-          "position": 38,
+          "position": 37,
           "team": {
             "id": 1836,
             "name": "Panama",
@@ -8939,7 +8927,7 @@
           "goalDifference": -1
         },
         {
-          "position": 39,
+          "position": 38,
           "team": {
             "id": 799,
             "name": "Croatia",
@@ -8958,7 +8946,7 @@
           "goalDifference": -2
         },
         {
-          "position": 40,
+          "position": 39,
           "team": {
             "id": 804,
             "name": "Senegal",
@@ -8977,7 +8965,7 @@
           "goalDifference": -2
         },
         {
-          "position": 41,
+          "position": 40,
           "team": {
             "id": 8049,
             "name": "Jordan",
@@ -8996,7 +8984,7 @@
           "goalDifference": -2
         },
         {
-          "position": 42,
+          "position": 41,
           "team": {
             "id": 779,
             "name": "Australia",
@@ -9015,7 +9003,7 @@
           "goalDifference": -2
         },
         {
-          "position": 43,
+          "position": 42,
           "team": {
             "id": 803,
             "name": "Turkey",
@@ -9034,7 +9022,7 @@
           "goalDifference": -2
         },
         {
-          "position": 44,
+          "position": 43,
           "team": {
             "id": 836,
             "name": "Haiti",
@@ -9053,7 +9041,7 @@
           "goalDifference": -3
         },
         {
-          "position": 45,
+          "position": 44,
           "team": {
             "id": 778,
             "name": "Algeria",
@@ -9070,6 +9058,25 @@
           "goalsFor": 0,
           "goalsAgainst": 3,
           "goalDifference": -3
+        },
+        {
+          "position": 45,
+          "team": {
+            "id": 792,
+            "name": "Sweden",
+            "shortName": "Sweden",
+            "tla": "SWE",
+            "crest": "https://crests.football-data.org/792.svg"
+          },
+          "playedGames": 1,
+          "form": "",
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 5,
+          "goalDifference": -4
         },
         {
           "position": 46,
@@ -9344,7 +9351,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:41:12Z"
       },
-      "playedMatches": 1,
+      "playedMatches": 2,
       "goals": 2,
       "assists": null,
       "penalties": 1
@@ -9599,6 +9606,37 @@
     },
     {
       "player": {
+        "id": 7459,
+        "name": "Cody Gakpo",
+        "firstName": "Cody",
+        "lastName": "Gakpo",
+        "dateOfBirth": "1999-05-07",
+        "nationality": "Netherlands",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:31Z"
+      },
+      "team": {
+        "id": 8601,
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "tla": "NED",
+        "crest": "https://crests.football-data.org/8601.svg",
+        "address": "Woudenbergseweg 56-58 / Postbus 515 Zeist 3700 AM",
+        "website": "http://www.knvb.nl",
+        "founded": 1889,
+        "clubColors": "Orange / White / Blue",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:43:48Z"
+      },
+      "playedMatches": 2,
+      "goals": 2,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 39237,
         "name": "Julián Quiñones",
         "firstName": "Julián",
@@ -9719,37 +9757,6 @@
       "playedMatches": 2,
       "goals": 1,
       "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 191295,
-        "name": "Hyun-Gyu Oh",
-        "firstName": "Hyeon-gyu",
-        "lastName": "Oh",
-        "dateOfBirth": "2001-04-12",
-        "nationality": "South Korea",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-05-13T09:43:42Z"
-      },
-      "team": {
-        "id": 772,
-        "name": "South Korea",
-        "shortName": "Korea Republic",
-        "tla": "KOR",
-        "crest": "https://crests.football-data.org/772.png",
-        "address": "1-131 Sinmunno, 2-ga Jongno-Gu Seoul 110-062",
-        "website": "http://www.kfa.or.kr",
-        "founded": 1928,
-        "clubColors": "Red / White / Blue",
-        "venue": null,
-        "lastUpdated": "2022-04-02T10:45:25Z"
-      },
-      "playedMatches": 2,
-      "goals": 1,
-      "assists": null,
       "penalties": null
     }
   ]
