@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-21T21:52:09.170Z",
+  "generatedAt": "2026-06-21T23:05:49.008Z",
   "matches": [
     {
       "area": {
@@ -2535,11 +2535,11 @@
       },
       "id": 537372,
       "utcDate": "2026-06-21T22:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-21T22:59:52Z",
       "homeTeam": {
         "id": 758,
         "name": "Uruguay",
@@ -2555,15 +2555,15 @@
         "crest": "https://crests.football-data.org/cape_verde.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         }
       },
       "odds": {
@@ -2635,7 +2635,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 129569,
+          "name": "Omar Mohamed Al Ali",
+          "type": "REFEREE",
+          "nationality": "United Arab Emirates"
+        }
+      ]
     },
     {
       "area": {
@@ -9486,6 +9493,37 @@
     },
     {
       "player": {
+        "id": 28770,
+        "name": "Maximiliano Araújo",
+        "firstName": "Maxi",
+        "lastName": "Araújo",
+        "dateOfBirth": "2000-02-15",
+        "nationality": "Uruguay",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": 20,
+        "lastUpdated": "2026-06-01T11:07:17Z"
+      },
+      "team": {
+        "id": 758,
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU",
+        "crest": "https://crests.football-data.org/758.svg",
+        "address": "Guayaybo 1531 Montevideo 11200",
+        "website": "http://www.auf.org.uy",
+        "founded": 1900,
+        "clubColors": "Sky Blue / White / Black",
+        "venue": null,
+        "lastUpdated": "2026-06-16T00:37:18Z"
+      },
+      "playedMatches": 2,
+      "goals": 2,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 118981,
         "name": "Elijah Just",
         "firstName": "Elijah",
@@ -9757,37 +9795,6 @@
         "clubColors": "Blue / White",
         "venue": null,
         "lastUpdated": "2026-06-01T09:40:05Z"
-      },
-      "playedMatches": 2,
-      "goals": 2,
-      "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 180137,
-        "name": "Mikel Oyarzabal",
-        "firstName": "",
-        "lastName": "Mikel Oyarzabal",
-        "dateOfBirth": "1997-04-21",
-        "nationality": "Spain",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 760,
-        "name": "Spain",
-        "shortName": "Spain",
-        "tla": "ESP",
-        "crest": "https://crests.football-data.org/760.svg",
-        "address": "Ramón y Cajal, s/n Las Rozas 28230",
-        "website": "http://www.rfef.es",
-        "founded": 1909,
-        "clubColors": "Red / Blue / Yellow",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:41:19Z"
       },
       "playedMatches": 2,
       "goals": 2,
