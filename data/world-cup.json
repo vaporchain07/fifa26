@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-21T08:15:11.038Z",
+  "generatedAt": "2026-06-21T11:28:01.337Z",
   "matches": [
     {
       "area": {
@@ -2143,7 +2143,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-20T19:02:08Z",
+      "lastUpdated": "2026-06-21T08:25:01Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -2209,7 +2209,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-20T22:05:03Z",
+      "lastUpdated": "2026-06-21T08:25:00Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -2275,7 +2275,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-21T02:00:28Z",
+      "lastUpdated": "2026-06-21T08:25:00Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -2341,7 +2341,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-21T06:03:01Z",
+      "lastUpdated": "2026-06-21T08:25:01Z",
       "homeTeam": {
         "id": 802,
         "name": "Tunisia",
