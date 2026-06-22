@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-22T13:29:51.059Z",
+  "generatedAt": "2026-06-22T18:05:10.413Z",
   "matches": [
     {
       "area": {
@@ -2667,11 +2667,11 @@
       },
       "id": 537399,
       "utcDate": "2026-06-22T17:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-22T18:00:04Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -2687,21 +2687,28 @@
         "crest": "https://crests.football-data.org/816.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 276653,
+          "name": "Amin Omar",
+          "type": "REFEREE",
+          "nationality": "Egypt"
+        }
+      ]
     },
     {
       "area": {
@@ -9183,6 +9190,37 @@
   "scorers": [
     {
       "player": {
+        "id": 3218,
+        "name": "Lionel Messi",
+        "firstName": "Lionel",
+        "lastName": "Messi",
+        "dateOfBirth": "1987-06-24",
+        "nationality": "Argentina",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:29Z"
+      },
+      "team": {
+        "id": 762,
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png",
+        "address": "Viamonte 1366/76 Buenos Aires, Buenos Aires 1053",
+        "website": "http://www.afa.org.ar",
+        "founded": 1893,
+        "clubColors": "Sky Blue / White / Black",
+        "venue": null,
+        "lastUpdated": "2022-05-17T21:09:25Z"
+      },
+      "playedMatches": 2,
+      "goals": 4,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 6928,
         "name": "Deniz Undav",
         "firstName": "Deniz",
@@ -9210,37 +9248,6 @@
       "playedMatches": 2,
       "goals": 3,
       "assists": 2,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 3218,
-        "name": "Lionel Messi",
-        "firstName": "Lionel",
-        "lastName": "Messi",
-        "dateOfBirth": "1987-06-24",
-        "nationality": "Argentina",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:29Z"
-      },
-      "team": {
-        "id": 762,
-        "name": "Argentina",
-        "shortName": "Argentina",
-        "tla": "ARG",
-        "crest": "https://crests.football-data.org/762.png",
-        "address": "Viamonte 1366/76 Buenos Aires, Buenos Aires 1053",
-        "website": "http://www.afa.org.ar",
-        "founded": 1893,
-        "clubColors": "Sky Blue / White / Black",
-        "venue": null,
-        "lastUpdated": "2022-05-17T21:09:25Z"
-      },
-      "playedMatches": 1,
-      "goals": 3,
-      "assists": null,
       "penalties": null
     },
     {
