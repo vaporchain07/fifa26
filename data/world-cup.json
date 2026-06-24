@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-24T21:10:34.083Z",
+  "generatedAt": "2026-06-24T22:48:03.451Z",
   "matches": [
     {
       "area": {
@@ -3313,11 +3313,11 @@
       },
       "id": 537344,
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-23T15:20:15Z",
+      "lastUpdated": "2026-06-24T22:48:00Z",
       "homeTeam": {
         "id": 815,
         "name": "Morocco",
@@ -3333,11 +3333,11 @@
         "crest": "https://crests.football-data.org/haiti.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "halfTime": {
           "home": null,
@@ -3379,11 +3379,11 @@
       },
       "id": 537343,
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-23T15:20:15Z",
+      "lastUpdated": "2026-06-24T22:47:55Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -3399,11 +3399,11 @@
         "crest": "https://crests.football-data.org/764.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "halfTime": {
           "home": null,
@@ -9346,6 +9346,37 @@
     },
     {
       "player": {
+        "id": 1556,
+        "name": "Vinicius Junior",
+        "firstName": "",
+        "lastName": "Vinícius Junior",
+        "dateOfBirth": "2000-07-12",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:32Z"
+      },
+      "team": {
+        "id": 764,
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg",
+        "address": "Rua Victor Civita 66 Bloco 1, Edifico 5 Rio de Janeiro, RJ 22775-044",
+        "website": "http://www.cbf.com.br/",
+        "founded": 1914,
+        "clubColors": "Yellow / Green / Blue",
+        "venue": null,
+        "lastUpdated": "2021-05-22T11:31:45Z"
+      },
+      "playedMatches": 3,
+      "goals": 3,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 6928,
         "name": "Deniz Undav",
         "firstName": "Deniz",
@@ -9528,37 +9559,6 @@
       "playedMatches": 3,
       "goals": 2,
       "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 1556,
-        "name": "Vinicius Junior",
-        "firstName": "",
-        "lastName": "Vinícius Junior",
-        "dateOfBirth": "2000-07-12",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:32Z"
-      },
-      "team": {
-        "id": 764,
-        "name": "Brazil",
-        "shortName": "Brazil",
-        "tla": "BRA",
-        "crest": "https://crests.football-data.org/764.svg",
-        "address": "Rua Victor Civita 66 Bloco 1, Edifico 5 Rio de Janeiro, RJ 22775-044",
-        "website": "http://www.cbf.com.br/",
-        "founded": 1914,
-        "clubColors": "Yellow / Green / Blue",
-        "venue": null,
-        "lastUpdated": "2021-05-22T11:31:45Z"
-      },
-      "playedMatches": 3,
-      "goals": 2,
-      "assists": 1,
       "penalties": null
     },
     {
