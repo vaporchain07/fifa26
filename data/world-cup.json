@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-25T16:18:33.059Z",
+  "generatedAt": "2026-06-25T18:30:38.070Z",
   "matches": [
     {
       "area": {
@@ -3611,7 +3611,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 212450,
+          "name": "Tori Penso",
+          "type": "REFEREE",
+          "nationality": "USA"
+        }
+      ]
     },
     {
       "area": {
@@ -3670,7 +3677,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 30960,
+          "name": "Glenn Nyberg",
+          "type": "REFEREE",
+          "nationality": "Sweden"
+        }
+      ]
     },
     {
       "area": {
