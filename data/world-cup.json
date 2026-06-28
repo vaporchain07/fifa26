@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-28T20:08:46.436Z",
+  "generatedAt": "2026-06-28T21:36:10.675Z",
   "matches": [
     {
       "area": {
@@ -4765,11 +4765,11 @@
       },
       "id": 537417,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-28T19:54:42Z",
+      "lastUpdated": "2026-06-28T21:02:00Z",
       "homeTeam": {
         "id": 774,
         "name": "South Africa",
@@ -4785,11 +4785,11 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
