@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T07:45:19.964Z",
+  "generatedAt": "2026-06-30T10:51:27.147Z",
   "matches": [
     {
       "area": {
@@ -4835,7 +4835,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T21:04:03Z",
+      "lastUpdated": "2026-06-30T08:25:01Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
