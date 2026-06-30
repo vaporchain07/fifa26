@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T20:26:40.041Z",
+  "generatedAt": "2026-06-30T21:54:42.333Z",
   "matches": [
     {
       "area": {
@@ -5119,11 +5119,11 @@
       },
       "id": 537416,
       "utcDate": "2026-06-30T21:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T15:20:12Z",
+      "lastUpdated": "2026-06-30T21:54:14Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -5139,15 +5139,15 @@
         "crest": "https://crests.football-data.org/792.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
@@ -9490,6 +9490,37 @@
     },
     {
       "player": {
+        "id": 3374,
+        "name": "Kylian Mbappé",
+        "firstName": "Kylian",
+        "lastName": "Mbappé",
+        "dateOfBirth": "1998-12-20",
+        "nationality": "France",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg",
+        "address": "87 Boulevard de Grenelle Paris 75738",
+        "website": "http://www.fff.fr",
+        "founded": 1919,
+        "clubColors": "Blue / White / Red",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:18Z"
+      },
+      "playedMatches": 4,
+      "goals": 5,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 38101,
         "name": "Erling Haaland",
         "firstName": "Erling",
@@ -9552,37 +9583,6 @@
     },
     {
       "player": {
-        "id": 3374,
-        "name": "Kylian Mbappé",
-        "firstName": "Kylian",
-        "lastName": "Mbappé",
-        "dateOfBirth": "1998-12-20",
-        "nationality": "France",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 773,
-        "name": "France",
-        "shortName": "France",
-        "tla": "FRA",
-        "crest": "https://crests.football-data.org/773.svg",
-        "address": "87 Boulevard de Grenelle Paris 75738",
-        "website": "http://www.fff.fr",
-        "founded": 1919,
-        "clubColors": "Blue / White / Red",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:42:18Z"
-      },
-      "playedMatches": 4,
-      "goals": 4,
-      "assists": 2,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 3373,
         "name": "Ousmane Dembélé",
         "firstName": "Ousmane",
@@ -9609,7 +9609,7 @@
       },
       "playedMatches": 4,
       "goals": 4,
-      "assists": 1,
+      "assists": 2,
       "penalties": null
     },
     {
