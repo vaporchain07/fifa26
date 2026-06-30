@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T13:06:50.348Z",
+  "generatedAt": "2026-06-30T16:00:19.783Z",
   "matches": [
     {
       "area": {
@@ -5087,7 +5087,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jesús Valenzuela",
+          "type": "REFEREE",
+          "nationality": "Venezuela"
+        }
+      ]
     },
     {
       "area": {
@@ -9562,7 +9569,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:43:53Z"
       },
-      "playedMatches": 3,
+      "playedMatches": 4,
       "goals": 4,
       "assists": null,
       "penalties": null
