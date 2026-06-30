@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T21:54:42.333Z",
+  "generatedAt": "2026-06-30T23:04:57.191Z",
   "matches": [
     {
       "area": {
@@ -5057,7 +5057,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T19:04:39Z",
+      "lastUpdated": "2026-06-30T19:12:59Z",
       "homeTeam": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -5119,11 +5119,11 @@
       },
       "id": 537416,
       "utcDate": "2026-06-30T21:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T21:54:14Z",
+      "lastUpdated": "2026-06-30T23:00:18Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -5142,7 +5142,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
+          "home": 3,
           "away": 0
         },
         "halfTime": {
@@ -5219,7 +5219,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9351,
+          "name": "Slavko Vinčič",
+          "type": "REFEREE",
+          "nationality": "Slovenia"
+        }
+      ]
     },
     {
       "area": {
@@ -9459,6 +9466,37 @@
   "scorers": [
     {
       "player": {
+        "id": 3374,
+        "name": "Kylian Mbappé",
+        "firstName": "Kylian",
+        "lastName": "Mbappé",
+        "dateOfBirth": "1998-12-20",
+        "nationality": "France",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg",
+        "address": "87 Boulevard de Grenelle Paris 75738",
+        "website": "http://www.fff.fr",
+        "founded": 1919,
+        "clubColors": "Blue / White / Red",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:18Z"
+      },
+      "playedMatches": 4,
+      "goals": 6,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 3218,
         "name": "Lionel Messi",
         "firstName": "Lionel",
@@ -9486,37 +9524,6 @@
       "playedMatches": 3,
       "goals": 6,
       "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 3374,
-        "name": "Kylian Mbappé",
-        "firstName": "Kylian",
-        "lastName": "Mbappé",
-        "dateOfBirth": "1998-12-20",
-        "nationality": "France",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 773,
-        "name": "France",
-        "shortName": "France",
-        "tla": "FRA",
-        "crest": "https://crests.football-data.org/773.svg",
-        "address": "87 Boulevard de Grenelle Paris 75738",
-        "website": "http://www.fff.fr",
-        "founded": 1919,
-        "clubColors": "Blue / White / Red",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:42:18Z"
-      },
-      "playedMatches": 4,
-      "goals": 5,
-      "assists": 2,
       "penalties": null
     },
     {
