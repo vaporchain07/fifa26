@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T18:17:42.273Z",
+  "generatedAt": "2026-06-30T20:26:40.041Z",
   "matches": [
     {
       "area": {
@@ -5053,11 +5053,11 @@
       },
       "id": 537424,
       "utcDate": "2026-06-30T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T18:17:07Z",
+      "lastUpdated": "2026-06-30T19:04:39Z",
       "homeTeam": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -5076,8 +5076,8 @@
         "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
           "home": 0,
@@ -5153,7 +5153,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 43899,
+          "name": "Danny Makkelie",
+          "type": "REFEREE",
+          "nationality": "Netherlands"
+        }
+      ]
     },
     {
       "area": {
@@ -9483,6 +9490,37 @@
     },
     {
       "player": {
+        "id": 38101,
+        "name": "Erling Haaland",
+        "firstName": "Erling",
+        "lastName": "Haaland",
+        "dateOfBirth": "2000-07-21",
+        "nationality": "Norway",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg",
+        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
+        "website": "http://www.fotball.no",
+        "founded": 1902,
+        "clubColors": "Red / White / Navy Blue",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:43:53Z"
+      },
+      "playedMatches": 4,
+      "goals": 5,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 1556,
         "name": "Vinicius Junior",
         "firstName": "",
@@ -9538,40 +9576,9 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
-      "playedMatches": 3,
-      "goals": 4,
-      "assists": 2,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 38101,
-        "name": "Erling Haaland",
-        "firstName": "Erling",
-        "lastName": "Haaland",
-        "dateOfBirth": "2000-07-21",
-        "nationality": "Norway",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 8872,
-        "name": "Norway",
-        "shortName": "Norway",
-        "tla": "NOR",
-        "crest": "https://crests.football-data.org/813.svg",
-        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
-        "website": "http://www.fotball.no",
-        "founded": 1902,
-        "clubColors": "Red / White / Navy Blue",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:43:53Z"
-      },
       "playedMatches": 4,
       "goals": 4,
-      "assists": null,
+      "assists": 2,
       "penalties": null
     },
     {
@@ -9600,7 +9607,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
-      "playedMatches": 3,
+      "playedMatches": 4,
       "goals": 4,
       "assists": 1,
       "penalties": null
