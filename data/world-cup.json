@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-06-30T23:04:57.191Z",
+  "generatedAt": "2026-07-01T01:37:52.429Z",
   "matches": [
     {
       "area": {
@@ -5057,7 +5057,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T19:12:59Z",
+      "lastUpdated": "2026-06-30T19:04:39Z",
       "homeTeam": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -5185,11 +5185,11 @@
       },
       "id": 537425,
       "utcDate": "2026-07-01T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T15:20:12Z",
+      "lastUpdated": "2026-07-01T01:05:45Z",
       "homeTeam": {
         "id": 769,
         "name": "Mexico",
@@ -5205,11 +5205,11 @@
         "crest": "https://crests.football-data.org/791.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -9466,37 +9466,6 @@
   "scorers": [
     {
       "player": {
-        "id": 3374,
-        "name": "Kylian Mbappé",
-        "firstName": "Kylian",
-        "lastName": "Mbappé",
-        "dateOfBirth": "1998-12-20",
-        "nationality": "France",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 773,
-        "name": "France",
-        "shortName": "France",
-        "tla": "FRA",
-        "crest": "https://crests.football-data.org/773.svg",
-        "address": "87 Boulevard de Grenelle Paris 75738",
-        "website": "http://www.fff.fr",
-        "founded": 1919,
-        "clubColors": "Blue / White / Red",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:42:18Z"
-      },
-      "playedMatches": 4,
-      "goals": 6,
-      "assists": 2,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 3218,
         "name": "Lionel Messi",
         "firstName": "Lionel",
@@ -9523,37 +9492,6 @@
       },
       "playedMatches": 3,
       "goals": 6,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 38101,
-        "name": "Erling Haaland",
-        "firstName": "Erling",
-        "lastName": "Haaland",
-        "dateOfBirth": "2000-07-21",
-        "nationality": "Norway",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 8872,
-        "name": "Norway",
-        "shortName": "Norway",
-        "tla": "NOR",
-        "crest": "https://crests.football-data.org/813.svg",
-        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
-        "website": "http://www.fotball.no",
-        "founded": 1902,
-        "clubColors": "Red / White / Navy Blue",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:43:53Z"
-      },
-      "playedMatches": 4,
-      "goals": 5,
       "assists": null,
       "penalties": null
     },
@@ -9590,6 +9528,68 @@
     },
     {
       "player": {
+        "id": 3374,
+        "name": "Kylian Mbappé",
+        "firstName": "Kylian",
+        "lastName": "Mbappé",
+        "dateOfBirth": "1998-12-20",
+        "nationality": "France",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg",
+        "address": "87 Boulevard de Grenelle Paris 75738",
+        "website": "http://www.fff.fr",
+        "founded": 1919,
+        "clubColors": "Blue / White / Red",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:18Z"
+      },
+      "playedMatches": 3,
+      "goals": 4,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 38101,
+        "name": "Erling Haaland",
+        "firstName": "Erling",
+        "lastName": "Haaland",
+        "dateOfBirth": "2000-07-21",
+        "nationality": "Norway",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg",
+        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
+        "website": "http://www.fotball.no",
+        "founded": 1902,
+        "clubColors": "Red / White / Navy Blue",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:43:53Z"
+      },
+      "playedMatches": 3,
+      "goals": 4,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 3373,
         "name": "Ousmane Dembélé",
         "firstName": "Ousmane",
@@ -9614,9 +9614,9 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 3,
       "goals": 4,
-      "assists": 2,
+      "assists": 1,
       "penalties": null
     },
     {
