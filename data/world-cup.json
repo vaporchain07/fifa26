@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-02T20:39:44.013Z",
+  "generatedAt": "2026-07-02T22:01:52.825Z",
   "matches": [
     {
       "area": {
@@ -5457,11 +5457,11 @@
       },
       "id": 537420,
       "utcDate": "2026-07-02T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-02T20:39:33Z",
+      "lastUpdated": "2026-07-02T21:08:24Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -5480,7 +5480,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "halfTime": {
@@ -5557,7 +5557,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 215543,
+          "name": "Espen Eskås",
+          "type": "REFEREE",
+          "nationality": "Norway"
+        }
+      ]
     },
     {
       "area": {
@@ -9657,6 +9664,37 @@
     },
     {
       "player": {
+        "id": 180137,
+        "name": "Mikel Oyarzabal",
+        "firstName": "",
+        "lastName": "Mikel Oyarzabal",
+        "dateOfBirth": "1997-04-21",
+        "nationality": "Spain",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg",
+        "address": "Ramón y Cajal, s/n Las Rozas 28230",
+        "website": "http://www.rfef.es",
+        "founded": 1909,
+        "clubColors": "Red / Blue / Yellow",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:41:19Z"
+      },
+      "playedMatches": 4,
+      "goals": 4,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 3373,
         "name": "Ousmane Dembélé",
         "firstName": "Ousmane",
@@ -10083,37 +10121,6 @@
         "clubColors": "Orange / White / Blue",
         "venue": null,
         "lastUpdated": "2026-06-01T09:43:48Z"
-      },
-      "playedMatches": 4,
-      "goals": 3,
-      "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 180137,
-        "name": "Mikel Oyarzabal",
-        "firstName": "",
-        "lastName": "Mikel Oyarzabal",
-        "dateOfBirth": "1997-04-21",
-        "nationality": "Spain",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 760,
-        "name": "Spain",
-        "shortName": "Spain",
-        "tla": "ESP",
-        "crest": "https://crests.football-data.org/760.svg",
-        "address": "Ramón y Cajal, s/n Las Rozas 28230",
-        "website": "http://www.rfef.es",
-        "founded": 1909,
-        "clubColors": "Red / Blue / Yellow",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:41:19Z"
       },
       "playedMatches": 4,
       "goals": 3,
