@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-01T23:16:45.572Z",
+  "generatedAt": "2026-07-02T01:30:21.865Z",
   "matches": [
     {
       "area": {
@@ -5391,11 +5391,11 @@
       },
       "id": 537421,
       "utcDate": "2026-07-02T00:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-30T15:20:13Z",
+      "lastUpdated": "2026-07-02T01:30:09Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -5411,15 +5411,15 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
@@ -9743,6 +9743,37 @@
     },
     {
       "player": {
+        "id": 131040,
+        "name": "Folarin Balogun",
+        "firstName": "Folarin",
+        "lastName": "Balogun",
+        "dateOfBirth": "2001-07-03",
+        "nationality": "USA",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:31Z"
+      },
+      "team": {
+        "id": 771,
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg",
+        "address": "1801 South Prairie Ave Chicago, IL 90266",
+        "website": "http://www.ussoccer.com",
+        "founded": 1913,
+        "clubColors": "White / Navy Blue / Red",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:10Z"
+      },
+      "playedMatches": 4,
+      "goals": 3,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 130173,
         "name": "Ismael Saibari",
         "firstName": "Ismael",
@@ -10076,37 +10107,6 @@
         "clubColors": "Green / White / Red",
         "venue": null,
         "lastUpdated": "2026-06-01T09:41:59Z"
-      },
-      "playedMatches": 4,
-      "goals": 2,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 15958,
-        "name": "Cyle Larin",
-        "firstName": "Cyle",
-        "lastName": "Larin",
-        "dateOfBirth": "1995-04-17",
-        "nationality": "Canada",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:00:54Z"
-      },
-      "team": {
-        "id": 828,
-        "name": "Canada",
-        "shortName": "Canada",
-        "tla": "CAN",
-        "crest": "https://crests.football-data.org/canada.svg",
-        "address": "null null null",
-        "website": null,
-        "founded": null,
-        "clubColors": null,
-        "venue": null,
-        "lastUpdated": "2022-10-07T08:25:45Z"
       },
       "playedMatches": 4,
       "goals": 2,
