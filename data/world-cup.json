@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-03T02:22:41.087Z",
+  "generatedAt": "2026-07-03T06:07:30.645Z",
   "matches": [
     {
       "area": {
@@ -5589,11 +5589,11 @@
       },
       "id": 537429,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-02T05:20:12Z",
+      "lastUpdated": "2026-07-03T05:03:24Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -5609,15 +5609,15 @@
         "crest": "https://crests.football-data.org/algeria.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
@@ -10007,7 +10007,7 @@
       },
       "playedMatches": 4,
       "goals": 3,
-      "assists": 1,
+      "assists": 2,
       "penalties": null
     },
     {
