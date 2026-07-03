@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-03T14:39:06.651Z",
+  "generatedAt": "2026-07-03T16:20:51.161Z",
   "matches": [
     {
       "area": {
@@ -5689,7 +5689,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 260120,
+          "name": "Gustavo Tejera",
+          "type": "REFEREE",
+          "nationality": "Uruguay"
+        }
+      ]
     },
     {
       "area": {
