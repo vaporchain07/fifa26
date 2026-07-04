@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-04T16:57:24.698Z",
+  "generatedAt": "2026-07-04T18:01:23.057Z",
   "matches": [
     {
       "area": {
@@ -5873,11 +5873,11 @@
       },
       "id": 537376,
       "utcDate": "2026-07-04T17:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-03T15:20:13Z",
+      "lastUpdated": "2026-07-04T17:58:30Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
@@ -5893,15 +5893,15 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
