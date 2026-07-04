@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-04T15:39:44.476Z",
+  "generatedAt": "2026-07-04T16:57:24.698Z",
   "matches": [
     {
       "area": {
@@ -9898,7 +9898,7 @@
         "venue": null,
         "lastUpdated": "2022-04-02T10:40:28Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 3,
       "assists": null,
       "penalties": null
@@ -10084,7 +10084,7 @@
         "venue": null,
         "lastUpdated": "2022-10-07T08:25:45Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 3,
       "assists": null,
       "penalties": null
