@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-05T18:35:06.286Z",
+  "generatedAt": "2026-07-05T20:09:00.489Z",
   "matches": [
     {
       "area": {
@@ -6005,11 +6005,11 @@
       },
       "id": 537377,
       "utcDate": "2026-07-05T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-05T05:20:12Z",
+      "lastUpdated": "2026-07-05T20:08:51Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -6025,11 +6025,11 @@
         "crest": "https://crests.football-data.org/813.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -9664,7 +9664,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:43:53Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 5,
       "assists": null,
       "penalties": null
@@ -9726,7 +9726,7 @@
         "venue": null,
         "lastUpdated": "2021-05-22T11:31:45Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 4,
       "assists": 1,
       "penalties": null
@@ -10129,7 +10129,7 @@
         "venue": null,
         "lastUpdated": "2021-05-22T11:31:45Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 3,
       "assists": null,
       "penalties": null
