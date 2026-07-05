@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-05T21:32:17.123Z",
+  "generatedAt": "2026-07-05T22:56:27.605Z",
   "matches": [
     {
       "area": {
@@ -6005,11 +6005,11 @@
       },
       "id": 537377,
       "utcDate": "2026-07-05T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-05T21:32:03Z",
+      "lastUpdated": "2026-07-05T22:09:19Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -6025,11 +6025,11 @@
         "crest": "https://crests.football-data.org/813.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
-          "away": 0
+          "home": 1,
+          "away": 2
         },
         "halfTime": {
           "home": 0,
@@ -6105,7 +6105,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 55970,
+          "name": "Alireza Faghani",
+          "type": "REFEREE",
+          "nationality": "Iran"
+        }
+      ]
     },
     {
       "area": {
@@ -9609,6 +9616,37 @@
     },
     {
       "player": {
+        "id": 38101,
+        "name": "Erling Haaland",
+        "firstName": "Erling",
+        "lastName": "Haaland",
+        "dateOfBirth": "2000-07-21",
+        "nationality": "Norway",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg",
+        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
+        "website": "http://www.fotball.no",
+        "founded": 1902,
+        "clubColors": "Red / White / Navy Blue",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:43:53Z"
+      },
+      "playedMatches": 5,
+      "goals": 7,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 3218,
         "name": "Lionel Messi",
         "firstName": "Lionel",
@@ -9635,37 +9673,6 @@
       },
       "playedMatches": 4,
       "goals": 7,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 38101,
-        "name": "Erling Haaland",
-        "firstName": "Erling",
-        "lastName": "Haaland",
-        "dateOfBirth": "2000-07-21",
-        "nationality": "Norway",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:30Z"
-      },
-      "team": {
-        "id": 8872,
-        "name": "Norway",
-        "shortName": "Norway",
-        "tla": "NOR",
-        "crest": "https://crests.football-data.org/813.svg",
-        "address": "Serviceboks 1, Ullevaal stadion Oslo 0840",
-        "website": "http://www.fotball.no",
-        "founded": 1902,
-        "clubColors": "Red / White / Navy Blue",
-        "venue": null,
-        "lastUpdated": "2026-06-01T09:43:53Z"
-      },
-      "playedMatches": 5,
-      "goals": 5,
       "assists": null,
       "penalties": null
     },
