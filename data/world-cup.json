@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-05T17:01:20.992Z",
+  "generatedAt": "2026-07-05T18:35:06.286Z",
   "matches": [
     {
       "area": {
@@ -6039,7 +6039,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 76608,
+          "name": "Ismail Elfath",
+          "type": "REFEREE",
+          "nationality": "United States"
+        }
+      ]
     },
     {
       "area": {
