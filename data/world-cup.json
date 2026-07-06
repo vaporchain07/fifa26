@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-06T21:53:37.572Z",
+  "generatedAt": "2026-07-06T23:00:53.239Z",
   "matches": [
     {
       "area": {
@@ -6237,7 +6237,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 129250,
+          "name": "Adham Makhadmeh",
+          "type": "REFEREE",
+          "nationality": "Jordan"
+        }
+      ]
     },
     {
       "area": {
@@ -9957,7 +9964,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:10Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 3,
       "assists": null,
       "penalties": null
