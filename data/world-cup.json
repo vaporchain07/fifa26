@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-06T16:14:53.696Z",
+  "generatedAt": "2026-07-06T18:24:27.295Z",
   "matches": [
     {
       "area": {
@@ -6171,7 +6171,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11580,
+          "name": "Anthony Taylor",
+          "type": "REFEREE",
+          "nationality": "England"
+        }
+      ]
     },
     {
       "area": {
@@ -9826,7 +9833,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:41:19Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 4,
       "assists": 1,
       "penalties": null
