@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-07T17:31:11.092Z",
+  "generatedAt": "2026-07-07T19:46:10.940Z",
   "matches": [
     {
       "area": {
@@ -6269,11 +6269,11 @@
       },
       "id": 537381,
       "utcDate": "2026-07-07T16:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-07T17:30:59Z",
+      "lastUpdated": "2026-07-07T18:15:15Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6289,10 +6289,10 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "winner": "AWAY_TEAM",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 3,
           "away": 2
         },
         "halfTime": {
@@ -6369,7 +6369,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "type": "REFEREE",
+          "nationality": null
+        }
+      ]
     },
     {
       "area": {
@@ -9606,6 +9613,37 @@
   "scorers": [
     {
       "player": {
+        "id": 3218,
+        "name": "Lionel Messi",
+        "firstName": "Lionel",
+        "lastName": "Messi",
+        "dateOfBirth": "1987-06-24",
+        "nationality": "Argentina",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:29Z"
+      },
+      "team": {
+        "id": 762,
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png",
+        "address": "Viamonte 1366/76 Buenos Aires, Buenos Aires 1053",
+        "website": "http://www.afa.org.ar",
+        "founded": 1893,
+        "clubColors": "Sky Blue / White / Black",
+        "venue": null,
+        "lastUpdated": "2022-05-17T21:09:25Z"
+      },
+      "playedMatches": 5,
+      "goals": 8,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 3374,
         "name": "Kylian Mbappé",
         "firstName": "Kylian",
@@ -9660,37 +9698,6 @@
         "clubColors": "Red / White / Navy Blue",
         "venue": null,
         "lastUpdated": "2026-06-01T09:43:53Z"
-      },
-      "playedMatches": 5,
-      "goals": 7,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 3218,
-        "name": "Lionel Messi",
-        "firstName": "Lionel",
-        "lastName": "Messi",
-        "dateOfBirth": "1987-06-24",
-        "nationality": "Argentina",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:29Z"
-      },
-      "team": {
-        "id": 762,
-        "name": "Argentina",
-        "shortName": "Argentina",
-        "tla": "ARG",
-        "crest": "https://crests.football-data.org/762.png",
-        "address": "Viamonte 1366/76 Buenos Aires, Buenos Aires 1053",
-        "website": "http://www.afa.org.ar",
-        "founded": 1893,
-        "clubColors": "Sky Blue / White / Black",
-        "venue": null,
-        "lastUpdated": "2022-05-17T21:09:25Z"
       },
       "playedMatches": 5,
       "goals": 7,
