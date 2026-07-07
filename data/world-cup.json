@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-07T12:23:08.536Z",
+  "generatedAt": "2026-07-07T15:23:25.403Z",
   "matches": [
     {
       "area": {
@@ -6303,7 +6303,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 43918,
+          "name": "François Letexier",
+          "type": "REFEREE",
+          "nationality": "France"
+        }
+      ]
     },
     {
       "area": {
@@ -9685,7 +9692,7 @@
         "venue": null,
         "lastUpdated": "2022-05-17T21:09:25Z"
       },
-      "playedMatches": 4,
+      "playedMatches": 5,
       "goals": 7,
       "assists": null,
       "penalties": null
