@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-07T21:17:57.338Z",
+  "generatedAt": "2026-07-07T22:35:36.964Z",
   "matches": [
     {
       "area": {
@@ -6339,7 +6339,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-07T21:17:45Z",
+      "lastUpdated": "2026-07-07T22:35:10Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -6356,12 +6356,20 @@
       },
       "score": {
         "winner": "DRAW",
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
         "fullTime": {
           "home": 0,
           "away": 0
         },
         "halfTime": {
+          "home": 0,
+          "away": 0
+        },
+        "regularTime": {
+          "home": null,
+          "away": null
+        },
+        "extraTime": {
           "home": 0,
           "away": 0
         }
