@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-08T08:14:31.840Z",
+  "generatedAt": "2026-07-08T10:33:29.319Z",
   "matches": [
     {
       "area": {
@@ -6273,7 +6273,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-08T07:58:07Z",
+      "lastUpdated": "2026-07-08T08:25:01Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
