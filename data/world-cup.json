@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-09T21:54:14.532Z",
+  "generatedAt": "2026-07-09T23:05:24.837Z",
   "matches": [
     {
       "area": {
@@ -6413,11 +6413,11 @@
       },
       "id": 537383,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-09T21:54:04Z",
+      "lastUpdated": "2026-07-09T22:25:01Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
