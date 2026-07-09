@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-09T18:15:52.586Z",
+  "generatedAt": "2026-07-09T20:15:45.816Z",
   "matches": [
     {
       "area": {
@@ -6413,11 +6413,11 @@
       },
       "id": 537383,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-09T05:20:10Z",
+      "lastUpdated": "2026-07-09T20:15:15Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -6433,11 +6433,11 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -9687,7 +9687,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
-      "playedMatches": 5,
+      "playedMatches": 6,
       "goals": 7,
       "assists": 2,
       "penalties": 1
@@ -9904,7 +9904,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
-      "playedMatches": 5,
+      "playedMatches": 6,
       "goals": 4,
       "assists": 2,
       "penalties": null
@@ -10028,7 +10028,7 @@
         "venue": null,
         "lastUpdated": "2022-04-02T10:40:28Z"
       },
-      "playedMatches": 5,
+      "playedMatches": 6,
       "goals": 3,
       "assists": null,
       "penalties": null
