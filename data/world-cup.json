@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-11T18:51:49.147Z",
+  "generatedAt": "2026-07-11T20:01:53.977Z",
   "matches": [
     {
       "area": {
@@ -6579,7 +6579,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9374,
+          "name": "Clément Turpin",
+          "type": "REFEREE",
+          "nationality": "France"
+        }
+      ]
     },
     {
       "area": {
