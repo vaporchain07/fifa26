@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-11T23:23:34.663Z",
+  "generatedAt": "2026-07-12T01:02:09.192Z",
   "matches": [
     {
       "area": {
@@ -6545,11 +6545,11 @@
       },
       "id": 537385,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-11T23:22:55Z",
+      "lastUpdated": "2026-07-11T23:53:31Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -9716,7 +9716,7 @@
         "venue": null,
         "lastUpdated": "2022-05-17T21:09:25Z"
       },
-      "playedMatches": 5,
+      "playedMatches": 6,
       "goals": 8,
       "assists": 1,
       "penalties": null
