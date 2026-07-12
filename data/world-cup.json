@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-12T01:02:09.192Z",
+  "generatedAt": "2026-07-12T04:48:11.110Z",
   "matches": [
     {
       "area": {
@@ -6619,11 +6619,11 @@
       },
       "id": 537386,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-11T05:20:09Z",
+      "lastUpdated": "2026-07-12T03:51:58Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6639,15 +6639,23 @@
         "crest": "https://crests.football-data.org/788.svg"
       },
       "score": {
-        "winner": null,
-        "duration": "REGULAR",
+        "winner": "HOME_TEAM",
+        "duration": "EXTRA_TIME",
         "fullTime": {
+          "home": 3,
+          "away": 1
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 0
+        },
+        "regularTime": {
           "home": null,
           "away": null
         },
-        "halfTime": {
-          "home": null,
-          "away": null
+        "extraTime": {
+          "home": 2,
+          "away": 0
         }
       },
       "odds": {
@@ -9718,7 +9726,7 @@
       },
       "playedMatches": 6,
       "goals": 8,
-      "assists": 1,
+      "assists": 2,
       "penalties": null
     },
     {
