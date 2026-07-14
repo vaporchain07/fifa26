@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-14T20:05:57.874Z",
+  "generatedAt": "2026-07-14T21:28:43.725Z",
   "matches": [
     {
       "area": {
@@ -6693,11 +6693,11 @@
       },
       "id": 537387,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-14T19:57:16Z",
+      "lastUpdated": "2026-07-14T21:04:16Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -6717,7 +6717,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "halfTime": {
           "home": 0,
