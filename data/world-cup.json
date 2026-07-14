@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-14T21:28:43.725Z",
+  "generatedAt": "2026-07-14T22:30:50.924Z",
   "matches": [
     {
       "area": {
@@ -6697,7 +6697,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-14T21:04:16Z",
+      "lastUpdated": "2026-07-14T22:25:01Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
