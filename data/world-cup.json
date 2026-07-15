@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-15T07:10:01.215Z",
+  "generatedAt": "2026-07-15T09:27:01.332Z",
   "matches": [
     {
       "area": {
@@ -9961,10 +9961,10 @@
         "lastName": "Sarr",
         "dateOfBirth": "1998-02-25",
         "nationality": "Senegal",
-        "section": "Midfield",
+        "section": "Offence",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2026-06-06T14:12:29Z"
+        "lastUpdated": "2026-07-15T09:25:44Z"
       },
       "team": {
         "id": 804,
