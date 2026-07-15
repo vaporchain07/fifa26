@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-15T21:52:27.388Z",
+  "generatedAt": "2026-07-15T22:52:58.851Z",
   "matches": [
     {
       "area": {
@@ -6763,7 +6763,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-15T21:09:25Z",
+      "lastUpdated": "2026-07-15T22:25:01Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
