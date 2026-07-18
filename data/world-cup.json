@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-18T21:43:27.976Z",
+  "generatedAt": "2026-07-18T22:41:38.567Z",
   "matches": [
     {
       "area": {
@@ -6829,7 +6829,7 @@
       "matchday": null,
       "stage": "THIRD_PLACE",
       "group": null,
-      "lastUpdated": "2026-07-18T21:43:24Z",
+      "lastUpdated": "2026-07-18T22:41:36Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -6848,12 +6848,12 @@
         "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
-          "away": 3
+          "home": 3,
+          "away": 4
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         }
       },
       "odds": {
@@ -9715,8 +9715,8 @@
         "lastUpdated": "2026-06-01T09:42:18Z"
       },
       "playedMatches": 8,
-      "goals": 8,
-      "assists": 3,
+      "goals": 10,
+      "assists": 4,
       "penalties": 1
     },
     {
@@ -10186,6 +10186,37 @@
     },
     {
       "player": {
+        "id": 172762,
+        "name": "Bradley Barcola",
+        "firstName": "Bradley",
+        "lastName": "Barcola",
+        "dateOfBirth": "2002-09-02",
+        "nationality": "France",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:30Z"
+      },
+      "team": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg",
+        "address": "87 Boulevard de Grenelle Paris 75738",
+        "website": "http://www.fff.fr",
+        "founded": 1919,
+        "clubColors": "Blue / White / Red",
+        "venue": null,
+        "lastUpdated": "2026-06-01T09:42:18Z"
+      },
+      "playedMatches": 8,
+      "goals": 3,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 612,
         "name": "Yoane Wissa",
         "firstName": "Yoane",
@@ -10271,37 +10302,6 @@
         "clubColors": null,
         "venue": null,
         "lastUpdated": "2022-10-07T08:25:45Z"
-      },
-      "playedMatches": 5,
-      "goals": 3,
-      "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 30842,
-        "name": "Matheus Cunha",
-        "firstName": "",
-        "lastName": "Matheus Cunha",
-        "dateOfBirth": "1999-05-27",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:32Z"
-      },
-      "team": {
-        "id": 764,
-        "name": "Brazil",
-        "shortName": "Brazil",
-        "tla": "BRA",
-        "crest": "https://crests.football-data.org/764.svg",
-        "address": "Rua Victor Civita 66 Bloco 1, Edifico 5 Rio de Janeiro, RJ 22775-044",
-        "website": "http://www.cbf.com.br/",
-        "founded": 1914,
-        "clubColors": "Yellow / Green / Blue",
-        "venue": null,
-        "lastUpdated": "2021-05-22T11:31:45Z"
       },
       "playedMatches": 5,
       "goals": 3,
