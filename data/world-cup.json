@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-19T16:50:50.055Z",
+  "generatedAt": "2026-07-19T17:53:07.572Z",
   "matches": [
     {
       "area": {
@@ -6925,7 +6925,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9351,
+          "name": "Slavko Vinčič",
+          "type": "REFEREE",
+          "nationality": "Slovenia"
+        }
+      ]
     }
   ],
   "standings": [
@@ -9900,7 +9907,7 @@
         "venue": null,
         "lastUpdated": "2026-06-01T09:41:19Z"
       },
-      "playedMatches": 7,
+      "playedMatches": 8,
       "goals": 5,
       "assists": 1,
       "penalties": 1
