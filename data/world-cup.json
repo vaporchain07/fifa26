@@ -2,7 +2,7 @@
   "provider": "football-data.org",
   "competition": "WC",
   "season": 2026,
-  "generatedAt": "2026-07-19T22:22:48.494Z",
+  "generatedAt": "2026-07-19T23:25:59.213Z",
   "matches": [
     {
       "area": {
@@ -6895,7 +6895,7 @@
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-07-19T22:15:38Z",
+      "lastUpdated": "2026-07-19T22:25:01Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
